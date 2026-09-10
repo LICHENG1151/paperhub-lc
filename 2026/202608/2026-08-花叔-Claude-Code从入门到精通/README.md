@@ -1,8 +1,8 @@
 <!--
-name: 2026-花叔 Claude Code 从入门到精通 · 本篇导航
+name: 2026-08-花叔-Claude-Code从入门到精通
 creator: Li Cheng
 created: 2026-08-25
-modified: 2026-08-25
+modified: 2026-09-10
 -->
 
 # 2026 · 花叔 Claude Code 从入门到精通 v2.0.0
