@@ -1,8 +1,8 @@
 <!--
-name: 2026-MiniCPM-o4.5 本篇导航
+name: 2026-04-MiniCPM-o4.5-实时全双工全模态交互
 creator: Li Cheng
 created: 2026-08-31
-modified: 2026-08-31
+modified: 2026-09-10
 -->
 
 # 2026 · MiniCPM-o 4.5：面向实时全双工的全模态交互（OpenBMB）

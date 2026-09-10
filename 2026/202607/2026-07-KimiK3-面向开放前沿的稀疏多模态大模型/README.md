@@ -1,8 +1,8 @@
 <!--
-name: 2026-KimiK3 本篇导航
+name: 2026-07-KimiK3-面向开放前沿的稀疏多模态大模型
 creator: Li Cheng
 created: 2026-08-14
-modified: 2026-08-14
+modified: 2026-09-10
 -->
 
 # 2026 · 面向开放前沿的稀疏多模态大模型（Kimi K3）
