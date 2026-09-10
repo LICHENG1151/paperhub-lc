@@ -1,8 +1,8 @@
 <!--
-name: 2026-SemiAnalysis-AgentX 本篇导航
+name: 2026-08-SemiAnalysis-AgentX智能体推理基准与CUDA护城河
 creator: Li Cheng
 created: 2026-08-26
-modified: 2026-08-26
+modified: 2026-09-10
 -->
 
 # 2026 · AgentX（InferenceX v3）：智能体推理下的 CUDA 护城河（SemiAnalysis）
