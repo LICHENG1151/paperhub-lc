@@ -2,7 +2,7 @@
 name: 2026年09月 论文与技术报告阅读索引
 creator: Li Cheng
 created: 2026-09-03
-modified: 2026-09-10
+modified: 2026-10-08
 -->
 
 # 2026年09月 论文与技术报告阅读索引
@@ -14,7 +14,7 @@ modified: 2026-09-10
 
 本月主题：Loop/Looped Transformer（2023–2026）。
 
-| 发表 | 论文 | 状态 | 一句话 | 入口 |
+| 发表 | 标题 | 状态 | 一句话 | 入口 |
 |---|---|---|---|---|
 | 2023-01 | Looped Transformers as Programmable Computers | 速览 | 固定权重浅层 Transformer 放入循环，执行程序计数器/条件分支/函数调用/迭代算法 | [README](2023-01-Giannou-可编程循环Transformer/README.md) · [总结](2023-01-Giannou-可编程循环Transformer/总结.md) |
 | 2024-10 | On Expressive Power of Looped Transformers | 速览 | 给出循环 Transformer 的函数逼近率，并用 timestep encoding 增强表达能力 | [README](2024-10-Xu-循环Transformer表达能力/README.md) · [总结](2024-10-Xu-循环Transformer表达能力/总结.md) |
@@ -38,6 +38,7 @@ modified: 2026-09-10
 
 ### DeepSeek
 
-| 发表 | 报告 | 状态 | 一句话 | 入口 |
+| 发表 | 标题 | 状态 | 一句话 | 入口 |
 |---|---|---|---|---|
 | 2026-09 | DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression | 精读中 | 552B 多模态 MoE、1M 上下文；CED+CSA2+FP4 主 KV+SWA Bounded Replay 把 global KV 压到 ≈890 B/token（≈V4-Flash 1/4）、persistent KV≈1/8；后训练无算法新意，增益全来自数据/环境合成 | [README](2026-09-DeepSeek-V4.1-Flash的KV缓存压缩/README.md) · [总结](2026-09-DeepSeek-V4.1-Flash的KV缓存压缩/总结.md) |
+| 2026-09 | DeepSeek Elastic Compute (DSec): A Sandbox Infrastructure for Effective Agentic Training at Scale | 已消化 | 多后端沙箱、可组合环境与按需镜像支撑高密度 Agent RL，rollout 状态独立于可抢占 GPU 任务。 | [README](2026-09-DSec-大规模智能体训练的弹性沙箱基础设施/README.md) · [总结](2026-09-DSec-大规模智能体训练的弹性沙箱基础设施/总结.md) |
