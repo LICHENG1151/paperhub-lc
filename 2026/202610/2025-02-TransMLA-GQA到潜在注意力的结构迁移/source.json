@@ -1,0 +1,20 @@
+{
+  "id": "2502.07864",
+  "title": "TransMLA: Multi-Head Latent Attention Is All You Need",
+  "date": "2025-02-11",
+  "authors": [
+    "Meng, Fanxu",
+    "Tang, Pingzhi",
+    "Tang, Xiaojuan",
+    "Yao, Zengwei",
+    "Sun, Xing",
+    "Zhang, Muhan"
+  ],
+  "abstract": "In this paper, we present TransMLA, a framework that seamlessly converts any GQA-based pre-trained model into an MLA-based model. Our approach enables direct compatibility with DeepSeek's codebase, allowing these models to fully leverage DeepSeek-specific optimizations such as vLLM and SGlang. By compressing 93% of the KV cache in LLaMA-2-7B, TransMLA achieves a 10.6x inference speedup at an 8K context length while preserving meaningful output quality. Additionally, the model requires only 6 billion tokens for fine-tuning to regain performance on par with the original across multiple benchmarks. TransMLA offers a practical solution for migrating GQA-based models to the MLA structure. When combined with DeepSeek's advanced features, such as FP8 quantization and Multi-Token Prediction, even greater inference acceleration can be realized.",
+  "version": "v5",
+  "file": "2502.07864v5.pdf",
+  "download_url": "https://arxiv.org/pdf/2502.07864v5",
+  "pages": 27,
+  "sha256": "ff4ff64b9e39dfb8afc2cbda61c57c51fb1d1712224305c6942c8cfacb996b72",
+  "retrieved": "2026-10-12"
+}

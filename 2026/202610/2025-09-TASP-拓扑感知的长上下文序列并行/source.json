@@ -1,0 +1,21 @@
+{
+  "id": "2509.26541",
+  "title": "TASP: Topology-aware Sequence Parallelism",
+  "date": "2025-09-30",
+  "authors": [
+    "Wang, Yida",
+    "Hong, Ke",
+    "Li, Xiuhong",
+    "Xu, Yuanchao",
+    "Wang, Wenxun",
+    "Dai, Guohao",
+    "Wang, Yu"
+  ],
+  "abstract": "Long-context large language models (LLMs) face constraints due to the quadratic complexity of the self-attention mechanism. The mainstream sequence parallelism (SP) method, Ring Attention, attempts to solve this by distributing the query into multiple query chunks across accelerators and enable each Q tensor to access all KV tensors from other accelerators via the Ring AllGather communication primitive. However, it exhibits low communication efficiency, restricting its practical applicability. This inefficiency stems from the mismatch between the Ring AllGather communication primitive it adopts and the AlltoAll topology of modern accelerators. A Ring AllGather primitive is composed of iterations of ring-styled data transfer, which can only utilize a very limited fraction of an AlltoAll topology. Inspired by the Hamiltonian decomposition of complete directed graphs, we identify that modern accelerator topology can be decomposed into multiple orthogonal ring datapaths which can concurrently transfer data without interference. Based on this, we further observe that the Ring AllGather primitive can also be decomposed into the same number of concurrent ring-styled data transfer at every iteration. Based on these insights, we propose TASP, a topology-aware SP method for long-context LLMs that fully utilizes the communication capacity of modern accelerators via topology decomposition and primitive decomposition. Experimental results on both single-node and multi-node NVIDIA H100 systems and a single-node AMD MI300X system demonstrate that TASP achieves higher communication efficiency than Ring Attention on these modern accelerator topologies and achieves up to 3.58 speedup than Ring Attention and its variant Zigzag-Ring Attention. The code is available at https://github.com/infinigence/HamiltonAttention.",
+  "version": "v2",
+  "file": "2509.26541v2.pdf",
+  "download_url": "https://arxiv.org/pdf/2509.26541v2",
+  "pages": 13,
+  "sha256": "09ed66a6f2aece617072bfc6bba1134c2e09e49844d8b25e7b8c7b55cab1bbd9",
+  "retrieved": "2026-10-12"
+}

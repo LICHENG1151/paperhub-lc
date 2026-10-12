@@ -1,0 +1,19 @@
+{
+  "id": "2507.07955",
+  "title": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling",
+  "date": "2025-07-10",
+  "authors": [
+    "Hwang, Sukjun",
+    "Wang, Brandon",
+    "Gu, Albert"
+  ],
+  "abstract": "Major progress on language models (LMs) in recent years has largely resulted from moving away from specialized models designed for specific tasks, to general models based on powerful architectures (e.g. the Transformer) that learn everything from raw data. Despite this trend, pre-processing steps such as tokenization remain a barrier to true end-to-end foundation models. We introduce a collection of new techniques that enable a dynamic chunking mechanism which automatically learns content- and context- dependent segmentation strategies learned jointly with the rest of the model. Incorporating this into an explicit hierarchical network (H-Net) allows replacing the (implicitly hierarchical) tokenization-LM-detokenization pipeline with a single model learned fully end-to-end. When compute- and data- matched, an H-Net with one stage of hierarchy operating at the byte level outperforms a strong Transformer language model operating over BPE tokens. Iterating the hierarchy to multiple stages further increases its performance by modeling multiple levels of abstraction, demonstrating significantly better scaling with data and matching the token-based Transformer of twice its size. H-Nets pretrained on English show significantly increased character-level robustness, and qualitatively learn meaningful data-dependent chunking strategies without any heuristics or explicit supervision. Finally, the H-Net's improvement over tokenized pipelines is further increased in languages and modalities with weaker tokenization heuristics, such as Chinese and code, or DNA sequences (nearly 4x improvement in data efficiency over baselines), showing the potential of true end-to-end models that learn and scale better from unprocessed data.",
+  "pdf": "2507.07955v2.pdf",
+  "pages": 39,
+  "sha256": "04a2b32e6e82853cfc23c5db132750874a86cde99219ec6f664128f4aa83122f",
+  "url": "https://arxiv.org/abs/2507.07955",
+  "version": "v2",
+  "file": "2507.07955v2.pdf",
+  "download_url": "https://arxiv.org/pdf/2507.07955v2",
+  "retrieved": "2026-10-12"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "2502.05171",
+  "title": "Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach",
+  "date": "2025-02-07",
+  "authors": [
+    "Geiping, Jonas",
+    "McLeish, Sean",
+    "Jain, Neel",
+    "Kirchenbauer, John",
+    "Singh, Siddharth",
+    "Bartoldson, Brian R.",
+    "Kailkhura, Bhavya",
+    "Bhatele, Abhinav",
+    "Goldstein, Tom"
+  ],
+  "abstract": "We study a novel language model architecture that is capable of scaling test-time computation by implicitly reasoning in latent space. Our model works by iterating a recurrent block, thereby unrolling to arbitrary depth at test-time. This stands in contrast to mainstream reasoning models that scale up compute by producing more tokens. Unlike approaches based on chain-of-thought, our approach does not require any specialized training data, can work with small context windows, and can capture types of reasoning that are not easily represented in words. We scale a proof-of-concept model to 3.5 billion parameters and 800 billion tokens. We show that the resulting model can improve its performance on reasoning benchmarks, sometimes dramatically, up to a computation load equivalent to 50 billion parameters.",
+  "version": "v2",
+  "file": "2502.05171v2.pdf",
+  "download_url": "https://arxiv.org/pdf/2502.05171v2",
+  "pages": 37,
+  "sha256": "96f4543683a06a470ccb0b6b0db27a98f283fde9467d175e838f03a629a76c7b",
+  "retrieved": "2026-10-12"
+}

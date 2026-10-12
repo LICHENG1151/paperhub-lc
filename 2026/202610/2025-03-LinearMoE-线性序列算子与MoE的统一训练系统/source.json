@@ -1,0 +1,19 @@
+{
+  "id": "2503.05447",
+  "title": "Linear-MoE: Linear Sequence Modeling Meets Mixture-of-Experts",
+  "date": "2025-03-07",
+  "authors": [
+    "Sun, Weigao",
+    "Lan, Disen",
+    "Zhu, Tong",
+    "Qu, Xiaoye",
+    "Cheng, Yu"
+  ],
+  "abstract": "Linear Sequence Modeling (LSM) like linear attention, state space models and linear RNNs, and Mixture-of-Experts (MoE) have recently emerged as significant architectural improvements. In this paper, we introduce Linear-MoE, a production-level system for modeling and training large-scale models that integrate LSM with MoE. Linear-MoE leverages the advantages of both LSM modules for linear-complexity sequence modeling and MoE layers for sparsely activation, aiming to offer high performance with efficient training. The Linear-MoE system comprises: 1) Modeling subsystem, which provides a unified framework supporting all instances of LSM. and 2) Training subsystem, which facilitates efficient training by incorporating various advanced parallelism technologies, particularly Sequence Parallelism designed for Linear-MoE models. Additionally, we explore hybrid models that combine Linear-MoE layers with standard Transformer-MoE layers with its Sequence Parallelism to further enhance model flexibility and performance. Evaluations on two model series, A0.3B-2B and A1B-7B, demonstrate Linear-MoE achieves efficiency gains while maintaining competitive performance on various benchmarks, showcasing its potential as a next-generation foundational model architecture. Code: https://github.com/OpenSparseLLMs/Linear-MoE.",
+  "version": "v2",
+  "file": "2503.05447v2.pdf",
+  "download_url": "https://arxiv.org/pdf/2503.05447v2",
+  "pages": 17,
+  "sha256": "52455a3fceb72976e95028ff30200335fb731f75607462a660b384ad0410bd5a",
+  "retrieved": "2026-10-12"
+}

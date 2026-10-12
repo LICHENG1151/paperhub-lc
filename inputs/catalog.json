@@ -1,0 +1,2223 @@
+{
+  "updated": "2026-10-12",
+  "target_month": "202610",
+  "month_created": "2026-10-08",
+  "source_order": [
+    "DeepSeek",
+    "智谱 GLM",
+    "Moonshot Kimi",
+    "阿里 Qwen",
+    "MiniMax",
+    "腾讯 Hunyuan",
+    "字节 Seed",
+    "小米 MiMo",
+    "清华大学",
+    "北京大学",
+    "复旦大学",
+    "上海交通大学",
+    "Stanford",
+    "MIT",
+    "UC Berkeley",
+    "CMU",
+    "Princeton",
+    "中国人民大学",
+    "KAIST",
+    "Mila",
+    "UC San Diego",
+    "腾讯优图",
+    "蚂蚁集团",
+    "Cornell"
+  ],
+  "articles": [
+    {
+      "key": "2607.24653",
+      "existing": true,
+      "path": "2026/202607/2026-07-KimiK3-面向开放前沿的稀疏多模态大模型",
+      "title": "Kimi K3: Open Frontier Intelligence (Technical Report of Kimi K3)",
+      "published": "2026-07",
+      "archive_month": "202607",
+      "sources": [
+        "Moonshot Kimi"
+      ],
+      "topics": [
+        "多模态骨干",
+        "MoE与路由"
+      ],
+      "status": "已消化",
+      "evidence_level": "H",
+      "priority": "历史归档",
+      "kind": "厂商技术报告",
+      "owner": "Moonshot Kimi",
+      "hook": "Kimi K3 是一个 2.8T 总参 / 104B 激活 的原生多模态 MoE 大模型，原生支持 100 万 token 上下文。核心是用「三条互补维度」重构信息流——序列（KDA 线性注意力 + Gated MLA 混合）、深度（Attention Res",
+      "url": "https://arxiv.org/abs/2607.24653",
+      "authors": "Kimi Team (Moonshot AI)"
+    },
+    {
+      "key": "2604.27393",
+      "existing": true,
+      "path": "2026/202608/2026-04-MiniCPM-o4.5-实时全双工全模态交互",
+      "title": "MiniCPM-o 4.5: Towards Real-Time Full-Duplex Omni-Modal Interaction",
+      "published": "2026-04",
+      "archive_month": "202608",
+      "sources": [
+        "OpenBMB"
+      ],
+      "topics": [
+        "多模态骨干"
+      ],
+      "status": "已消化",
+      "evidence_level": "H",
+      "priority": "历史归档",
+      "kind": "厂商技术报告",
+      "owner": "OpenBMB",
+      "hook": "MiniCPM-o 4.5 是一个 9B 开源全模态大模型，核心贡献是把多模态交互从\"感知与响应交替进行的回合制\"升级为 实时全双工（full-duplex）——边看、边听、边说同时进行，并能基于对场景的持续理解主动发起提醒/解说。支撑它的关键技术是 Omni",
+      "url": "https://arxiv.org/abs/2604.27393",
+      "authors": "Junbo Cui, Bokai Xu, Chongyi Wang, Tianyu Yu, ... Maosong Sun*, Zhiyuan Liu*, Yuan Yao* (MiniCPM-o Team, OpenBMB)"
+    },
+    {
+      "key": "2026-08-AEGIS-大规模LLM训练的在线静默数据损坏检测",
+      "existing": true,
+      "path": "2026/202608/2026-08-AEGIS-大规模LLM训练的在线静默数据损坏检测",
+      "title": "Safeguarding LLM Training at Scale: Online SDC Detection and Insights from 35 Million GPU Hours",
+      "published": "2026-08",
+      "archive_month": "202608",
+      "sources": [
+        "清华大学",
+        "字节 Seed"
+      ],
+      "topics": [
+        "智能体与系统工程"
+      ],
+      "status": "已消化",
+      "evidence_level": "H",
+      "priority": "历史归档",
+      "kind": "学术论文",
+      "owner": "清华大学",
+      "hook": "AEGIS 是面向万卡级 LLM 训练的在线静默数据损坏（SDC）检测框架。核心是 cSensor–cVerifier 两阶段抽象：把检测拆成「关键路径上的轻量感知」+「关键路径外的确定性确认」，确认工作塞进流水线气泡（pipeline bubble）里跑。它",
+      "url": "https://www.usenix.org/conference/osdi26/presentation/lei",
+      "authors": "Kinman Lei, Liyan Zheng, Xiang Li, et al. (Tsinghua University & ByteDance)"
+    },
+    {
+      "key": "2026-08-Cordis-时空可组合性的动态组合编程范式",
+      "existing": true,
+      "path": "2026/202608/2026-08-Cordis-时空可组合性的动态组合编程范式",
+      "title": "A Programming Paradigm for Spatiotemporal Composability",
+      "published": "2026-08",
+      "archive_month": "202608",
+      "sources": [
+        "DeepSeek",
+        "北京大学"
+      ],
+      "topics": [
+        "智能体与系统工程"
+      ],
+      "status": "已消化",
+      "evidence_level": "H",
+      "priority": "历史归档",
+      "kind": "厂商技术报告",
+      "owner": "DeepSeek",
+      "hook": "把编程语言理论里的 effect（程序如何改环境） 与 coeffect（程序如何依赖环境） 从编译期静态标注下沉为运行时机制，得到一套支持运行时装/卸载组件的动态组合范式：卸载组件时能完整回滚其副作用（时间可组合），组件间依赖能声明并反应式重解析（空间可组合",
+      "url": "https://github.com/cordiverse/paper/blob/main/paper.pdf",
+      "authors": "Yifan Shi, Wei Zhang, Tianyi Cui (Peking University; DeepSeek-AI)"
+    },
+    {
+      "key": "2026-08-SemiAnalysis-AgentX智能体推理基准与CUDA护城河",
+      "existing": true,
+      "path": "2026/202608/2026-08-SemiAnalysis-AgentX智能体推理基准与CUDA护城河",
+      "title": "AgentX - InferenceXv3: Does CUDA Moat Hold up in Agentic Inferencing?",
+      "published": "2026-08",
+      "archive_month": "202608",
+      "sources": [
+        "SemiAnalysis"
+      ],
+      "topics": [
+        "KV压缩与长上下文"
+      ],
+      "status": "精读中",
+      "evidence_level": "H",
+      "priority": "历史归档",
+      "kind": "行业分析",
+      "owner": "SemiAnalysis",
+      "hook": "SemiAnalysis 发布 AgentX 1.0——号称\"全球首个完全开源、多轮、100 万上下文的智能体编码推理基准\"（Apache 2.0，自称投入 >$3M 建数据集），作为 InferenceX v3 的新场景，去回答一个尖锐问题：当负载从\"定长 ",
+      "url": "https://newsletter.semianalysis.com/p/agentx-inferencexv3-does-cuda-moat",
+      "authors": "Cam Quilici, Bryan Shan, Alec Ibarra, Daniel Nishball, Zane Fong, Kimbo Chen, Dylan Patel (SemiAnalysis)"
+    },
+    {
+      "key": "2026-08-花叔-Claude-Code从入门到精通",
+      "existing": true,
+      "path": "2026/202608/2026-08-花叔-Claude-Code从入门到精通",
+      "title": "Claude Code 从入门到精通 v2.0.0 —— 面向工程师与产品经理的 AI 编程完全指南",
+      "published": "2026-08",
+      "archive_month": "202608",
+      "sources": [
+        "花叔"
+      ],
+      "topics": [
+        "智能体与系统工程"
+      ],
+      "status": "已消化",
+      "evidence_level": "H",
+      "priority": "历史归档",
+      "kind": "技术手册/教程",
+      "owner": "花叔",
+      "hook": "一本教「聪明人如何一周内从零用 AI 构建产品」的手册：核心不是教你写代码，而是推动一次身份转变——从「写代码的人」变成「给指令、做决策的人」；全书把 Claude Code 的能力归结为可迁移的心智模型（五步循环 + Prompt/Context/Harne",
+      "url": "code:",
+      "authors": "花叔（公众号「花叔」/ B 站「AI 进化论-花生」）"
+    },
+    {
+      "key": "2301.13196",
+      "existing": true,
+      "path": "2026/202609/2023-01-Giannou-可编程循环Transformer",
+      "title": "Looped Transformers as Programmable Computers",
+      "published": "2023-01",
+      "archive_month": "202609",
+      "sources": [
+        "作者团队待核验"
+      ],
+      "topics": [
+        "循环与自适应深度"
+      ],
+      "status": "速览",
+      "evidence_level": "H",
+      "priority": "历史归档",
+      "kind": "学术论文",
+      "owner": "作者团队待核验",
+      "hook": "可编程循环Transformer",
+      "url": "https://arxiv.org/abs/2301.13196",
+      "authors": "Angeliki Giannou, Shashank Rajput, Jy-yong Sohn, Kangwook Lee, Jason D. Lee, Dimitris Papailiopoulos"
+    },
+    {
+      "key": "2410.01405",
+      "existing": true,
+      "path": "2026/202609/2024-10-Xu-循环Transformer表达能力",
+      "title": "On Expressive Power of Looped Transformers: Theoretical Analysis and Enhancement via Timestep Encoding",
+      "published": "2024-10",
+      "archive_month": "202609",
+      "sources": [
+        "作者团队待核验"
+      ],
+      "topics": [
+        "智能体与系统工程"
+      ],
+      "status": "速览",
+      "evidence_level": "H",
+      "priority": "历史归档",
+      "kind": "学术论文",
+      "owner": "作者团队待核验",
+      "hook": "循环Transformer表达能力",
+      "url": "https://arxiv.org/abs/2410.01405",
+      "authors": "Kevin Xu, Issei Sato"
+    },
+    {
+      "key": "2501.10688",
+      "existing": true,
+      "path": "2026/202609/2025-01-Huang-超图算法推理",
+      "title": "Neural Algorithmic Reasoning for Hypergraphs with Looped Transformers",
+      "published": "2025-01",
+      "archive_month": "202609",
+      "sources": [
+        "作者团队待核验"
+      ],
+      "topics": [
+        "智能体与系统工程"
+      ],
+      "status": "精读中",
+      "evidence_level": "H",
+      "priority": "历史归档",
+      "kind": "学术论文",
+      "owner": "作者团队待核验",
+      "hook": "超图算法推理",
+      "url": "https://arxiv.org/abs/2501.10688",
+      "authors": "Zekai Huang, Yingyu Liang, Zhenmei Shi, Zhao Song, Zhen Zhuang"
+    },
+    {
+      "key": "2502.17416",
+      "existing": true,
+      "path": "2026/202609/2025-02-Saunshi-潜在思维与循环Transformer",
+      "title": "Reasoning with Latent Thoughts: On the Power of Looped Transformers",
+      "published": "2025-02",
+      "archive_month": "202609",
+      "sources": [
+        "作者团队待核验"
+      ],
+      "topics": [
+        "智能体与系统工程"
+      ],
+      "status": "速览",
+      "evidence_level": "H",
+      "priority": "历史归档",
+      "kind": "学术论文",
+      "owner": "作者团队待核验",
+      "hook": "潜在思维与循环Transformer",
+      "url": "https://arxiv.org/abs/2502.17416",
+      "authors": "Nikunj Saunshi, Nishanth Dikkala, Zhiyuan Li, Sanjiv Kumar, Sashank J. Reddi"
+    },
+    {
+      "key": "2509.25239",
+      "existing": true,
+      "path": "2026/202609/2025-09-Xu-CoT与潜在思维比较",
+      "title": "A Formal Comparison Between Chain of Thought and Latent Thought",
+      "published": "2025-09",
+      "archive_month": "202609",
+      "sources": [
+        "作者团队待核验"
+      ],
+      "topics": [
+        "智能体与系统工程"
+      ],
+      "status": "速览",
+      "evidence_level": "H",
+      "priority": "历史归档",
+      "kind": "学术论文",
+      "owner": "作者团队待核验",
+      "hook": "CoT与潜在思维比较",
+      "url": "https://arxiv.org/abs/2509.25239",
+      "authors": "Kevin Xu, Issei Sato"
+    },
+    {
+      "key": "2606.31779",
+      "existing": true,
+      "path": "2026/202609/2026-06-Fan-潜在与显式推理桥接",
+      "title": "Bridging the Gap Between Latent and Explicit Reasoning with Looped Transformers",
+      "published": "2026-06",
+      "archive_month": "202609",
+      "sources": [
+        "作者团队待核验"
+      ],
+      "topics": [
+        "智能体与系统工程"
+      ],
+      "status": "速览",
+      "evidence_level": "H",
+      "priority": "历史归档",
+      "kind": "学术论文",
+      "owner": "作者团队待核验",
+      "hook": "潜在与显式推理桥接",
+      "url": "https://arxiv.org/abs/2606.31779",
+      "authors": "Ying Fan, Anej Svete, Kangwook Lee"
+    },
+    {
+      "key": "2606.18524",
+      "existing": true,
+      "path": "2026/202609/2026-06-Kuo-循环Transformer外推稳定性",
+      "title": "Stabilizing Extrapolation in Looped Transformers via Learned Stochastic Stopping",
+      "published": "2026-06",
+      "archive_month": "202609",
+      "sources": [
+        "作者团队待核验"
+      ],
+      "topics": [
+        "智能体与系统工程"
+      ],
+      "status": "速览",
+      "evidence_level": "H",
+      "priority": "历史归档",
+      "kind": "学术论文",
+      "owner": "作者团队待核验",
+      "hook": "循环Transformer外推稳定性",
+      "url": "https://arxiv.org/abs/2606.18524",
+      "authors": "Hsun-Yu Kuo, El Mahdi Chayti, Patrik Reizinger, Wieland Brendel, Martin Jaggi"
+    },
+    {
+      "key": "2607.10681",
+      "existing": true,
+      "path": "2026/202609/2026-07-Buehlmaier-LayerNorm增益控制",
+      "title": "LayerNorm as Implicit Gain Control in Looped Transformers",
+      "published": "2026-07",
+      "archive_month": "202609",
+      "sources": [
+        "作者团队待核验"
+      ],
+      "topics": [
+        "循环与自适应深度"
+      ],
+      "status": "速览",
+      "evidence_level": "H",
+      "priority": "历史归档",
+      "kind": "学术论文",
+      "owner": "作者团队待核验",
+      "hook": "LayerNorm增益控制",
+      "url": "https://arxiv.org/abs/2607.10681",
+      "authors": "Matthias M. M. Buehlmaier"
+    },
+    {
+      "key": "2607.27656",
+      "existing": true,
+      "path": "2026/202609/2026-07-Kim-源中心状态演化",
+      "title": "Looped Transformers with Source-Centered State Evolution",
+      "published": "2026-07",
+      "archive_month": "202609",
+      "sources": [
+        "作者团队待核验"
+      ],
+      "topics": [
+        "智能体与系统工程"
+      ],
+      "status": "速览",
+      "evidence_level": "H",
+      "priority": "历史归档",
+      "kind": "学术论文",
+      "owner": "作者团队待核验",
+      "hook": "源中心状态演化",
+      "url": "https://arxiv.org/abs/2607.27656",
+      "authors": "Bum Jun Kim, Kohei Hayashi, Shunsuke Kamiya, Masanori Koyama, Yusuke Iwasawa, Yutaka Matsuo"
+    },
+    {
+      "key": "2607.13491",
+      "existing": true,
+      "path": "2026/202609/2026-07-Li-DeepLoop深度缩放",
+      "title": "DeepLoop: Depth Scaling for Looped Transformers",
+      "published": "2026-07",
+      "archive_month": "202609",
+      "sources": [
+        "作者团队待核验"
+      ],
+      "topics": [
+        "智能体与系统工程"
+      ],
+      "status": "速览",
+      "evidence_level": "H",
+      "priority": "历史归档",
+      "kind": "学术论文",
+      "owner": "作者团队待核验",
+      "hook": "DeepLoop深度缩放",
+      "url": "https://arxiv.org/abs/2607.13491",
+      "authors": "Shuzhen Li, Yifan Zhang, Jiacheng Guo, Quanquan Gu, Mengdi Wang"
+    },
+    {
+      "key": "2607.15456",
+      "existing": true,
+      "path": "2026/202609/2026-07-ONeill-循环潜在注意力",
+      "title": "Looped Latent Attention: Cross-Loop KV Compression for Looped Transformers",
+      "published": "2026-07",
+      "archive_month": "202609",
+      "sources": [
+        "作者团队待核验"
+      ],
+      "topics": [
+        "智能体与系统工程"
+      ],
+      "status": "速览",
+      "evidence_level": "H",
+      "priority": "历史归档",
+      "kind": "学术论文",
+      "owner": "作者团队待核验",
+      "hook": "循环潜在注意力",
+      "url": "https://arxiv.org/abs/2607.15456",
+      "authors": "James O'Neill, Fergal Reid"
+    },
+    {
+      "key": "2607.20519",
+      "existing": true,
+      "path": "2026/202609/2026-07-Popescu-循环Transformer自适应深度",
+      "title": "Adaptive Depth in Looped Transformers: Diagnosing Learned Halting Gates and Trajectory Readouts",
+      "published": "2026-07",
+      "archive_month": "202609",
+      "sources": [
+        "作者团队待核验"
+      ],
+      "topics": [
+        "智能体与系统工程"
+      ],
+      "status": "速览",
+      "evidence_level": "H",
+      "priority": "历史归档",
+      "kind": "学术论文",
+      "owner": "作者团队待核验",
+      "hook": "循环Transformer自适应深度",
+      "url": "https://arxiv.org/abs/2607.20519",
+      "authors": "Andrei Cristian Popescu, Haitz Sáez de Ocáriz Borde, Pietro Liò"
+    },
+    {
+      "key": "2607.20594",
+      "existing": true,
+      "path": "2026/202609/2026-07-Zhang-循环成为算法",
+      "title": "When Does Recurrence Become an Algorithm? Convergence Selection in Weight-Tied Looped Transformers",
+      "published": "2026-07",
+      "archive_month": "202609",
+      "sources": [
+        "作者团队待核验"
+      ],
+      "topics": [
+        "智能体与系统工程"
+      ],
+      "status": "速览",
+      "evidence_level": "H",
+      "priority": "历史归档",
+      "kind": "学术论文",
+      "owner": "作者团队待核验",
+      "hook": "循环成为算法",
+      "url": "https://arxiv.org/abs/2607.20594",
+      "authors": "Tong Zhang, Junhao Hu, Yun Peng, Tao Xie"
+    },
+    {
+      "key": "2608.26556",
+      "existing": true,
+      "path": "2026/202609/2026-08-Kim-动力学相选择",
+      "title": "Dynamical phase selection controls compute scaling in looped transformers",
+      "published": "2026-08",
+      "archive_month": "202609",
+      "sources": [
+        "作者团队待核验"
+      ],
+      "topics": [
+        "智能体与系统工程"
+      ],
+      "status": "速览",
+      "evidence_level": "H",
+      "priority": "历史归档",
+      "kind": "学术论文",
+      "owner": "作者团队待核验",
+      "hook": "动力学相选择",
+      "url": "https://arxiv.org/abs/2608.26556",
+      "authors": "Gunn Kim"
+    },
+    {
+      "key": "2608.03624",
+      "existing": true,
+      "path": "2026/202609/2026-08-Shomali-LoopMTP",
+      "title": "LoopMTP: A Looped Transformer Guided by Latent Multi-Token Prediction",
+      "published": "2026-08",
+      "archive_month": "202609",
+      "sources": [
+        "作者团队待核验"
+      ],
+      "topics": [
+        "智能体与系统工程"
+      ],
+      "status": "速览",
+      "evidence_level": "H",
+      "priority": "历史归档",
+      "kind": "学术论文",
+      "owner": "作者团队待核验",
+      "hook": "LoopMTP",
+      "url": "https://arxiv.org/abs/2608.03624",
+      "authors": "Behzad Shomali, Markus Frey, David Berghaus, Joachim Koehler, Mehdi Ali"
+    },
+    {
+      "key": "2609.22978",
+      "existing": true,
+      "path": "2026/202609/2026-09-DSec-大规模智能体训练的弹性沙箱基础设施",
+      "title": "DeepSeek Elastic Compute (DSec): A Sandbox Infrastructure for Effective Agentic Training at Scale",
+      "published": "2026-09",
+      "archive_month": "202609",
+      "sources": [
+        "DeepSeek",
+        "清华大学"
+      ],
+      "topics": [
+        "智能体与系统工程"
+      ],
+      "status": "已消化",
+      "evidence_level": "H",
+      "priority": "历史归档",
+      "kind": "厂商技术报告",
+      "owner": "DeepSeek",
+      "hook": "DSec 将多种沙箱后端、可组合环境层、3FS 按需镜像读取、内存回收与 CPU 隔离整合成 Agent 训练平台，并把有状态 rollout 移出可抢占的 GPU 任务，使环境能够独立存活、暂停和恢复。它减少环境准备与状态丢失造成的训练浪费，但不是新 RL ",
+      "url": "https://arxiv.org/abs/2609.22978v1",
+      "authors": "Jialiang Huang et al.（DeepSeek-AI、清华大学）"
+    },
+    {
+      "key": "2609.19969",
+      "existing": true,
+      "path": "2026/202609/2026-09-DeepSeek-V4.1-Flash的KV缓存压缩",
+      "title": "DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression",
+      "published": "2026-09",
+      "archive_month": "202609",
+      "sources": [
+        "DeepSeek"
+      ],
+      "topics": [
+        "智能体与系统工程"
+      ],
+      "status": "精读中",
+      "evidence_level": "H",
+      "priority": "历史归档",
+      "kind": "厂商技术报告",
+      "owner": "DeepSeek",
+      "hook": "V4.1-Flash的KV缓存压缩",
+      "url": "https://arxiv.org/abs/2609.19969",
+      "authors": "DeepSeek-AI"
+    },
+    {
+      "key": "2609.01924",
+      "existing": true,
+      "path": "2026/202609/2026-09-Wang-Jacobian全局工作空间",
+      "title": "Looped Transformers under the Jacobian Lens: Does the Global Workspace Survive Recurrence?",
+      "published": "2026-09",
+      "archive_month": "202609",
+      "sources": [
+        "作者团队待核验"
+      ],
+      "topics": [
+        "智能体与系统工程"
+      ],
+      "status": "速览",
+      "evidence_level": "H",
+      "priority": "历史归档",
+      "kind": "学术论文",
+      "owner": "作者团队待核验",
+      "hook": "Jacobian全局工作空间",
+      "url": "https://arxiv.org/abs/2609.01924",
+      "authors": "Wenlong Wang, Fergal Reid"
+    },
+    {
+      "key": "2609.01343",
+      "existing": true,
+      "path": "2026/202609/2026-09-Wang-SMELT",
+      "title": "SMELT: Scaling Laws for Compute-Matched MoE Looped Transformers",
+      "published": "2026-09",
+      "archive_month": "202609",
+      "sources": [
+        "作者团队待核验"
+      ],
+      "topics": [
+        "智能体与系统工程"
+      ],
+      "status": "速览",
+      "evidence_level": "H",
+      "priority": "历史归档",
+      "kind": "学术论文",
+      "owner": "作者团队待核验",
+      "hook": "SMELT",
+      "url": "https://arxiv.org/abs/2609.01343",
+      "authors": "Shaowen Wang, Ge Zhang, Kairong Luo, Yuhao Wu, Shaofan Liu, Jiaheng Liu, Wenhao Huang, Shen Yan, Jian Li"
+    },
+    {
+      "key": "2502.19405",
+      "existing": true,
+      "path": "2026/202610/2025-02-Verde-机器学习委托计算验证与跨硬件可复现算子",
+      "title": "Verde: Verification via Refereed Delegation for Machine Learning Programs",
+      "published": "2025-02",
+      "archive_month": "202610",
+      "sources": [
+        "作者团队待核验"
+      ],
+      "topics": [
+        "智能体与系统工程"
+      ],
+      "status": "速览",
+      "evidence_level": "H",
+      "priority": "历史归档",
+      "kind": "学术论文",
+      "owner": "作者团队待核验",
+      "hook": "以争议仲裁和 RepOps 可复现算子验证委托给不可信计算方的机器学习程序。",
+      "url": "https://arxiv.org/abs/2502.19405",
+      "authors": "Arasu Arun et al."
+    },
+    {
+      "key": "2510.09180",
+      "existing": true,
+      "path": "2026/202610/2025-10-RepDL-训练与推理的跨平台逐位复现",
+      "title": "RepDL: Bit-level Reproducible Deep Learning Training and Inference",
+      "published": "2025-10",
+      "archive_month": "202610",
+      "sources": [
+        "Microsoft"
+      ],
+      "topics": [
+        "训练系统与可复现性"
+      ],
+      "status": "速览",
+      "evidence_level": "H",
+      "priority": "历史归档",
+      "kind": "厂商技术报告",
+      "owner": "Microsoft",
+      "hook": "用正确舍入和固定计算顺序构建跨 CPU/GPU 逐位一致的深度学习算子库。",
+      "url": "https://arxiv.org/abs/2510.09180",
+      "authors": "Peichen Xie, Xian Zhang, Shuo Chen"
+    },
+    {
+      "key": "2609.17380",
+      "existing": true,
+      "path": "2026/202610/2026-09-OPEN-1B-异构硬件上可审计的大模型训练",
+      "title": "OPEN-1B: A Fully Auditable Training Run",
+      "published": "2026-09",
+      "archive_month": "202610",
+      "sources": [
+        "Gensyn"
+      ],
+      "topics": [
+        "训练系统与可复现性"
+      ],
+      "status": "速览",
+      "evidence_level": "H",
+      "priority": "历史归档",
+      "kind": "厂商技术报告",
+      "owner": "Gensyn",
+      "hook": "通过可复现算子、全局数据流和确定性通信重放并逐位验证大模型训练步骤。",
+      "url": "https://arxiv.org/abs/2609.17380",
+      "authors": "John Donaghy et al."
+    },
+    {
+      "key": "2502.11089",
+      "arxiv": "2502.11089",
+      "path": "2026/202610/2025-02-NSA-原生可训练的硬件友好稀疏注意力",
+      "title": "Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention",
+      "subject": "原生可训练的硬件友好稀疏注意力",
+      "published": "2025-02-16",
+      "archive_month": "202610",
+      "sources": [
+        "DeepSeek"
+      ],
+      "topics": [
+        "稀疏与局部注意力",
+        "KV压缩与长上下文"
+      ],
+      "status": "速览",
+      "evidence_level": "B",
+      "priority": "第一梯队",
+      "kind": "学术论文",
+      "owner": "DeepSeek",
+      "hook": "通过压缩、选择与局部窗口三条路径，在预训练阶段直接使用硬件友好的稀疏注意力。",
+      "ideas": [
+        "压缩路径保留粗粒度全局信息，选择路径访问更精细的相关 token，局部窗口保留邻域信息。",
+        "将块级稀疏模式与 GPU 算术强度、访存模式共同设计，同时覆盖前向、反向和解码。"
+      ],
+      "evidence": [
+        "论文报告原生稀疏预训练及与 full attention 的任务比较。",
+        "64K 序列的训练与解码加速结果用于论证整个生命周期的效率。"
+      ],
+      "limits": "NSA 与后续 DSA 不是同一种算法；不能用 NSA 的实验数字替代 V3.2 的结构或部署证据。",
+      "insight": "优先拆开阅读选择算法和 kernel 数据流；对于训练系统，反向传播是否同样受益比单看 decode 更重要。",
+      "read_scope": "摘要、方法概览及实验结论",
+      "affiliation_evidence": "PDF 首页或作者署名信息",
+      "venue": "arXiv:2502.11089",
+      "url": "https://arxiv.org/abs/2502.11089",
+      "code": "",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "2502.13189",
+      "arxiv": "2502.13189",
+      "path": "2026/202610/2025-02-MoBA-基于块路由的混合注意力",
+      "title": "MoBA: Mixture of Block Attention for Long-Context LLMs",
+      "subject": "基于块路由的混合注意力",
+      "published": "2025-02-18",
+      "archive_month": "202610",
+      "sources": [
+        "Moonshot Kimi",
+        "清华大学",
+        "浙江大学与之江实验室"
+      ],
+      "topics": [
+        "稀疏与局部注意力",
+        "KV压缩与长上下文"
+      ],
+      "status": "速览",
+      "evidence_level": "A",
+      "priority": "第一梯队",
+      "kind": "厂商技术报告",
+      "owner": "Moonshot Kimi",
+      "hook": "将 MoE 的条件选择思想用于注意力块，在长序列中按 query 选择要访问的 KV 区块。",
+      "ideas": [
+        "把上下文划分为块，依据 query 与块表示做路由。",
+        "保持块内高效稠密计算，用块级选择降低全序列访问量。"
+      ],
+      "evidence": [
+        "论文提供语言模型训练与长上下文实验，官方公开实现。",
+        "摘要明确说明 MoBA 已部署支持 Kimi 长上下文请求。"
+      ],
+      "limits": "需要区分检索选择误差、块大小和稀疏率；存在实现依赖，不能把理论 FLOPs 缩减直接视作吞吐提升。",
+      "insight": "与 NSA 对读，比较块路由、全局信息保留和因果约束的不同处理。",
+      "read_scope": "摘要、方法概览及实验结论",
+      "affiliation_evidence": "PDF 第1页署名",
+      "venue": "arXiv:2502.13189",
+      "url": "https://arxiv.org/abs/2502.13189",
+      "code": "https://github.com/MoonshotAI/MoBA",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "2512.02556",
+      "arxiv": "2512.02556",
+      "path": "2026/202610/2025-12-DeepSeekV3.2-DSA稀疏注意力与开放模型验证",
+      "title": "DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models",
+      "subject": "DSA稀疏注意力与开放模型验证",
+      "published": "2025-12-02",
+      "archive_month": "202610",
+      "sources": [
+        "DeepSeek"
+      ],
+      "topics": [
+        "稀疏与局部注意力",
+        "MoE与路由",
+        "KV压缩与长上下文"
+      ],
+      "status": "速览",
+      "evidence_level": "A",
+      "priority": "第一梯队",
+      "kind": "厂商技术报告",
+      "owner": "DeepSeek",
+      "hook": "将 DeepSeek Sparse Attention 引入正式模型，降低长上下文注意力开销，同时扩展后训练。",
+      "ideas": [
+        "DSA 通过轻量索引机制选择参与注意力计算的位置，减少长上下文成本。",
+        "保留对架构部分的独立阅读；RL 扩展和任务合成属于报告中的另一条贡献线。"
+      ],
+      "evidence": [
+        "正式模型技术报告，提供长上下文效率与模型能力评估。"
+      ],
+      "limits": "整体模型分数同时受到稀疏注意力、数据和 RL 的影响，不能全部归因于 DSA。",
+      "insight": "把 DSA 索引成本、KV 访问与实际 serving 配置放在一起评价，重点看长上下文性能是否以可控方式保持。",
+      "read_scope": "摘要、DSA 方法与模型评估概览",
+      "affiliation_evidence": "PDF 首页或作者署名信息",
+      "venue": "arXiv:2512.02556",
+      "url": "https://arxiv.org/abs/2512.02556",
+      "code": "",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "2606.19348",
+      "arxiv": "2606.19348",
+      "path": "2026/202610/2026-06-DeepSeekV4-压缩注意力与流形残差的大规模验证",
+      "title": "DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence",
+      "subject": "压缩注意力与流形残差的大规模验证",
+      "published": "2026-04-26",
+      "archive_month": "202610",
+      "sources": [
+        "DeepSeek"
+      ],
+      "topics": [
+        "稀疏与局部注意力",
+        "KV压缩与长上下文",
+        "残差连接与稳定性",
+        "MoE与路由"
+      ],
+      "status": "速览",
+      "evidence_level": "A",
+      "priority": "第一梯队",
+      "kind": "厂商技术报告",
+      "owner": "DeepSeek",
+      "hook": "通过 CSA/HCA 混合压缩注意力与 mHC，将稀疏 MoE 扩展到百万 token 上下文。",
+      "ideas": [
+        "CSA 与 HCA 组合处理不同压缩强度的上下文信息。",
+        "mHC 改造残差连接，配合 MoE 和优化器设计进行大规模训练。"
+      ],
+      "evidence": [
+        "报告提供 Pro/Flash 预览模型及检查点：Pro 1.6T 总参、49B 激活，Flash 284B 总参、13B 激活。",
+        "作者在百万上下文下比较 V4-Pro 与 V3.2 的 FLOPs 和 KV cache；比例依赖该特定设置。"
+      ],
+      "limits": "属于多组件系统报告，注意力与残差贡献需要参考各自消融；预览版本不应当作最终版本。",
+      "insight": "这是第一梯队架构整合阅读的主线，先弄清压缩层的数据流，再追踪 cache 形式与跨设备并行的变化。",
+      "read_scope": "摘要、方法概览及实验结论",
+      "affiliation_evidence": "PDF 首页或作者署名信息",
+      "venue": "arXiv:2606.19348",
+      "url": "https://arxiv.org/abs/2606.19348",
+      "code": "",
+      "date_note": "arXiv 编号归属 2026-06，页面 citation_date 字段为 2026-04-26，两者存在跨月差异。时间表保留该日期字段，目录月份按规范取 arXiv 编号月；此日期差异需后续核对。",
+      "title_verified": true
+    },
+    {
+      "key": "2512.24880",
+      "arxiv": "2512.24880",
+      "path": "2026/202610/2025-12-mHC-流形约束的多流残差连接",
+      "title": "mHC: Manifold-Constrained Hyper-Connections",
+      "subject": "流形约束的多流残差连接",
+      "published": "2025-12-31",
+      "archive_month": "202610",
+      "sources": [
+        "DeepSeek"
+      ],
+      "topics": [
+        "残差连接与稳定性"
+      ],
+      "status": "速览",
+      "evidence_level": "B",
+      "priority": "第一梯队",
+      "kind": "学术论文",
+      "owner": "DeepSeek",
+      "hook": "扩展残差流并对连接矩阵施加约束，以缓解普通 Hyper-Connections 的传播不稳定问题。",
+      "ideas": [
+        "将多条残差流之间的混合限制在具有稳定传播性质的空间。",
+        "同步优化访存与实现开销，使残差拓扑改动适用于规模训练。"
+      ],
+      "evidence": [
+        "论文给出规模实验和传播稳定性分析。",
+        "DeepSeek-V4 报告明确将 mHC 列为架构组成。"
+      ],
+      "limits": "“后续采用”不等价于所有规模、精度与并行策略下都有同样收益。",
+      "insight": "与 Kimi Attention Residuals 对读：前者约束多流混合，后者沿深度选择历史层表示，解决的问题和状态开销不同。",
+      "read_scope": "摘要、方法概览及实验结论",
+      "affiliation_evidence": "PDF 首页或作者署名信息",
+      "venue": "arXiv:2512.24880",
+      "url": "https://arxiv.org/abs/2512.24880",
+      "code": "",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "2601.07372",
+      "arxiv": "2601.07372",
+      "path": "2026/202610/2026-01-Engram-条件记忆查表与计算容量解耦",
+      "title": "Conditional Memory via Scalable Lookup: A New Axis of Sparsity for Large Language Models",
+      "subject": "条件记忆查表与计算容量解耦",
+      "published": "2026-01-12",
+      "archive_month": "202610",
+      "sources": [
+        "DeepSeek",
+        "北京大学"
+      ],
+      "topics": [
+        "记忆与隐空间计算",
+        "MoE与路由"
+      ],
+      "status": "速览",
+      "evidence_level": "B",
+      "priority": "第一梯队",
+      "kind": "学术论文",
+      "owner": "DeepSeek",
+      "hook": "将条件记忆查表作为 MoE 条件计算之外的容量轴，让静态模式检索与神经计算分工。",
+      "ideas": [
+        "通过现代化 N-gram embedding 构造可确定寻址的记忆模块。",
+        "研究固定资源下条件计算与条件记忆的容量分配，并利用可预测寻址预取主机内存。"
+      ],
+      "evidence": [
+        "论文报告 27B 规模与等参数、等 FLOPs MoE 基线比较。"
+      ],
+      "limits": "查表是模型内部记忆模块，不是外部文档 RAG；本论文不单独证明它已用于某个旗舰模型。",
+      "insight": "特别关注 embedding 表容量、带宽与命中模式，防止参数效率改善被 host-device 数据搬移抵消。",
+      "read_scope": "摘要、方法概览及实验结论",
+      "affiliation_evidence": "PDF 第1页：Peking University / DeepSeek-AI",
+      "venue": "arXiv:2601.07372",
+      "url": "https://arxiv.org/abs/2601.07372",
+      "code": "",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "2508.06471",
+      "arxiv": "2508.06471",
+      "path": "2026/202610/2025-08-GLM4.5-深而窄MoE与多头注意力设计",
+      "title": "GLM-4.5: Agentic, Reasoning, and Coding (ARC) Foundation Models",
+      "subject": "深而窄MoE与多头注意力设计",
+      "published": "2025-08-08",
+      "archive_month": "202610",
+      "sources": [
+        "智谱 GLM",
+        "清华大学"
+      ],
+      "topics": [
+        "MoE与路由",
+        "多Token预测与投机解码",
+        "残差连接与稳定性"
+      ],
+      "status": "速览",
+      "evidence_level": "A",
+      "priority": "第一梯队",
+      "kind": "厂商技术报告",
+      "owner": "智谱 GLM",
+      "hook": "以更深更窄的 MoE、更多注意力头与 MTP 构建 GLM-4.5 / Air，提供与同期模型的结构对照。",
+      "ideas": [
+        "缩小 hidden dimension 和路由专家宽度，同时增加网络深度。",
+        "采用 GQA、partial RoPE；4.5 使用 QK-Norm，Air 的表列配置不同，不应一概而论。",
+        "增加一个 MoE MTP 层用于投机解码，使用无辅助损失的均衡路由与 sigmoid gate。"
+      ],
+      "evidence": [
+        "§2.1、Table 1 明确列出 355B/32B 与 106B/12B 两种模型及 DeepSeek-V3、Kimi K2 对照。",
+        "正文指出增加 attention heads 的收益在推理任务上出现，不一定体现为训练 loss 改善。"
+      ],
+      "limits": "层数、宽度、头数与训练配方联动；报告中的经验结论需要在等计算预算下复核。",
+      "insight": "这篇应优先精读 §2.1 和 Table 1，可直接组织“深度 vs 宽度 vs 头数”的消融矩阵。",
+      "read_scope": "首页署名、§2.1 Architecture、Table 1、摘要与评估概览",
+      "affiliation_evidence": "PDF 首页或作者署名信息",
+      "venue": "arXiv:2508.06471",
+      "url": "https://arxiv.org/abs/2508.06471",
+      "code": "https://github.com/zai-org/GLM-4.5",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "2602.15763",
+      "arxiv": "2602.15763",
+      "path": "2026/202610/2026-02-GLM5-面向长程任务的稀疏MoE骨干",
+      "title": "GLM-5: from Vibe Coding to Agentic Engineering",
+      "subject": "面向长程任务的稀疏MoE骨干",
+      "published": "2026-02-17",
+      "archive_month": "202610",
+      "sources": [
+        "智谱 GLM",
+        "清华大学"
+      ],
+      "topics": [
+        "MoE与路由",
+        "稀疏与局部注意力",
+        "KV压缩与长上下文",
+        "多Token预测与投机解码"
+      ],
+      "status": "速览",
+      "evidence_level": "A",
+      "priority": "第一梯队",
+      "kind": "厂商技术报告",
+      "owner": "智谱 GLM",
+      "hook": "以 MLA-256、Muon Split、DSA 与共享参数 MTP 重构 GLM-5 的长上下文效率。",
+      "ideas": [
+        "扩大到 256 experts、80 层、744B 总参/40B 激活；通过减少层数控制专家并行通信。",
+        "MLA 配合逐头 Muon Split；MLA-256 增大头维并减少头数，保持训练预算同时降低解码计算。",
+        "训练时共享 3 个 MTP 层参数，降低多步草稿的内存开销；通过 continued pre-training 引入 DSA。"
+      ],
+      "evidence": [
+        "§2.1、Table 1 比较 GQA-8、MLA、Muon Split、MLA-256。",
+        "Table 2 在私有 prompt 集比较 MTP 接受长度，Table 3 比较 MLA 与 DSA 长上下文基座。"
+      ],
+      "limits": "标题强调智能体工程，架构相关信息只占报告的一部分；不能将 agent benchmark 改善直接视为新骨干的消融结果。",
+      "insight": "与 GLM-4.5 的结构表逐项对齐，尤其看稀疏注意力是否改变 KV 成本和长输入 workload 的预算。",
+      "read_scope": "首页署名、§2.1 Architecture、§2.1.1 DSA、Tables 1–3",
+      "affiliation_evidence": "PDF 首页或作者署名信息",
+      "venue": "arXiv:2602.15763",
+      "url": "https://arxiv.org/abs/2602.15763",
+      "code": "https://github.com/zai-org/GLM-5",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "2604.26752",
+      "arxiv": "2604.26752",
+      "path": "2026/202610/2026-04-GLM5VTurbo-原生多模态智能体基础模型",
+      "title": "GLM-5V-Turbo: Toward a Native Foundation Model for Multimodal Agents",
+      "subject": "原生多模态智能体基础模型",
+      "published": "2026-04-29",
+      "archive_month": "202610",
+      "sources": [
+        "智谱 GLM"
+      ],
+      "topics": [
+        "多模态骨干",
+        "MoE与路由"
+      ],
+      "status": "速览",
+      "evidence_level": "A",
+      "priority": "第一梯队",
+      "kind": "厂商技术报告",
+      "owner": "智谱 GLM",
+      "hook": "GLM-5V-Turbo 的结构重点是 CogViT 与多模态 MTP：保留图像位置、用共享图像标记输入 MTP 头，以兼顾优化和跨流水线通信成本。",
+      "ideas": [
+        "CogViT 以 SigLIP2 语义与 DINOv3 纹理特征作双教师，先做掩码图像建模再做跨模态对齐。",
+        "MMTP 比较传视觉 embedding、屏蔽视觉 token、共享可学习图像标记三种设计，采用第三种并保留位置。",
+        "共享图像标记避免跨流水线阶段传递视觉 embedding，并减少与序列／上下文并行对接的复杂度。"
+      ],
+      "evidence": [
+        "官方全文 §2.1 / Figure 1 比较 CogViT 视觉任务表现；§2.2 / Figure 2 报告 0.5B 消融的训练损失与收敛。",
+        "模型整体评测、联合 RL 和工具生态属于组合方案验证，不等于每一结构组件的大模型独立消融。"
+      ],
+      "limits": "本条为多模态延伸；与纯文本模型之间的能力差异不能视为控制变量架构比较。",
+      "insight": "关注视觉 token 预算与长上下文处理的耦合，优先定位模型结构章节后再读训练流程。",
+      "read_scope": "官方全文 §2.1–2.2、Figure 1–2 与模型概览",
+      "affiliation_evidence": "PDF 首页或作者署名信息",
+      "venue": "arXiv:2604.26752",
+      "url": "https://arxiv.org/abs/2604.26752",
+      "code": "",
+      "date_note": "本次随档保存 arXiv 官方完整 HTML 原文；PDF 未随档，可由 arXiv 页面下载。",
+      "source_format": "html",
+      "title_verified": true
+    },
+    {
+      "key": "2507.20534",
+      "arxiv": "2507.20534",
+      "path": "2026/202610/2025-07-KimiK2-万亿参数MoE与注意力稳定化",
+      "title": "Kimi K2: Open Agentic Intelligence",
+      "subject": "万亿参数MoE与注意力稳定化",
+      "published": "2025-07-28",
+      "archive_month": "202610",
+      "sources": [
+        "Moonshot Kimi"
+      ],
+      "topics": [
+        "MoE与路由",
+        "残差连接与稳定性"
+      ],
+      "status": "速览",
+      "evidence_level": "A",
+      "priority": "第一梯队",
+      "kind": "厂商技术报告",
+      "owner": "Moonshot Kimi",
+      "hook": "在 1T 总参数、32B 激活参数的 MoE 上，用 MuonClip/QK-clip 支撑大规模稳定训练。",
+      "ideas": [
+        "采用大规模稀疏专家骨干，在受控激活计算量下扩大容量。",
+        "MuonClip 的 QK-clip 处理注意力 logit 相关训练不稳定；它是优化与稳定化设计，不是新的注意力类别。"
+      ],
+      "evidence": [
+        "报告公开 base 与 post-trained 检查点，预训练 15.5T token。",
+        "作者报告训练中零 loss spike，并提供 agent/coding 评估。"
+      ],
+      "limits": "零 loss spike 是该训练运行的结果，不是对任意配置的保证；后训练贡献需与预训练结构分离。",
+      "insight": "把 K2 作为 Kimi Linear 和 K3 的基线，重点比较稀疏专家、注意力状态、优化稳定性与激活预算。",
+      "read_scope": "摘要、方法概览及实验结论",
+      "affiliation_evidence": "PDF 首页或作者署名信息",
+      "venue": "arXiv:2507.20534",
+      "url": "https://arxiv.org/abs/2507.20534",
+      "code": "",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "2602.02276",
+      "arxiv": "2602.02276",
+      "path": "2026/202610/2026-02-KimiK2.5-视觉与语言联合建模的MoE演进",
+      "title": "Kimi K2.5: Visual Agentic Intelligence",
+      "subject": "视觉与语言联合建模的MoE演进",
+      "published": "2026-02-02",
+      "archive_month": "202610",
+      "sources": [
+        "Moonshot Kimi"
+      ],
+      "topics": [
+        "多模态骨干",
+        "MoE与路由"
+      ],
+      "status": "速览",
+      "evidence_level": "A",
+      "priority": "第一梯队",
+      "kind": "厂商技术报告",
+      "owner": "Moonshot Kimi",
+      "hook": "追踪 K2 到 K2.5 的多模态骨干与视觉语言联合训练，补齐 Kimi 模型演进链。",
+      "ideas": [
+        "重点关注视觉编码与语言 MoE 的连接方式及视频输入表示。",
+        "区分模型结构变化与 agent swarm 等推理系统机制。"
+      ],
+      "evidence": [
+        "官方报告给出多模态训练与能力评估，发布对应模型。"
+      ],
+      "limits": "多模态与智能体训练同时变化，完整产品能力不构成单个结构组件的因果证据。",
+      "insight": "在 K2/K2.5/K3 的对照中固定语言骨干相关字段，单列视觉编码器、token 压缩与融合方式。",
+      "read_scope": "摘要、方法概览及实验结论",
+      "affiliation_evidence": "PDF 首页或作者署名信息",
+      "venue": "arXiv:2602.02276",
+      "url": "https://arxiv.org/abs/2602.02276",
+      "code": "",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "2510.26692",
+      "arxiv": "2510.26692",
+      "path": "2026/202610/2025-10-KimiLinear-KDA与MLA的混合线性注意力",
+      "title": "Kimi Linear: An Expressive, Efficient Attention Architecture",
+      "subject": "KDA与MLA的混合线性注意力",
+      "published": "2025-10-30",
+      "archive_month": "202610",
+      "sources": [
+        "Moonshot Kimi"
+      ],
+      "topics": [
+        "线性注意力与SSM",
+        "KV压缩与长上下文",
+        "MoE与路由"
+      ],
+      "status": "速览",
+      "evidence_level": "A",
+      "priority": "第一梯队",
+      "kind": "厂商技术报告",
+      "owner": "Moonshot Kimi",
+      "hook": "用细粒度门控的 KDA 搭配 MLA，在有限状态记忆与全局检索间取得折中。",
+      "ideas": [
+        "KDA 在 Gated DeltaNet 基础上引入更细粒度的门控机制。",
+        "采用专门的分块算法实现高效状态更新，并与 MLA 分层混合。"
+      ],
+      "evidence": [
+        "48B 总参、3B 激活，公开预训练/指令权重和 kernel。",
+        "论文报告同训练配方下与 full MLA 的比较；百万上下文吞吐收益依赖测试配置。"
+      ],
+      "limits": "不能把该比较推广到所有规模和任务；有限状态记忆与 KV cache 的信息容量不同。",
+      "insight": "优先阅读公平基线和状态大小控制，随后对照 Qwen3-Next 的混合比例及 kernel 实现。",
+      "read_scope": "摘要、方法概览及实验结论",
+      "affiliation_evidence": "PDF 首页或作者署名信息",
+      "venue": "arXiv:2510.26692",
+      "url": "https://arxiv.org/abs/2510.26692",
+      "code": "",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "2603.15031",
+      "arxiv": "2603.15031",
+      "path": "2026/202610/2026-03-AttnRes-跨层注意力替代固定残差累加",
+      "title": "Attention Residuals",
+      "subject": "跨层注意力替代固定残差累加",
+      "published": "2026-03-16",
+      "archive_month": "202610",
+      "sources": [
+        "Moonshot Kimi"
+      ],
+      "topics": [
+        "残差连接与稳定性"
+      ],
+      "status": "速览",
+      "evidence_level": "B",
+      "priority": "第一梯队",
+      "kind": "厂商技术报告",
+      "owner": "Moonshot Kimi",
+      "hook": "用对历史层输出的注意力选择替代固定加和，并通过 Block AttnRes 控制内存与通信成本。",
+      "ideas": [
+        "每层根据可学习查询对前面层输出做输入相关的 softmax 聚合。",
+        "按层分块存储表示，将全量历史层访问缩减为块级访问，结合流水通信与两阶段计算。"
+      ],
+      "evidence": [
+        "在 Kimi Linear 48B 总参/3B 激活模型上预训练 1.4T token。",
+        "论文提供 scaling 与内容相关深度选择的消融。"
+      ],
+      "limits": "Full 与 Block AttnRes 的资源成本不同，不能只根据示意图判断流水并行可行性。",
+      "insight": "与 mHC 构成第一梯队残差结构对照：一个选择历史表示，一个约束多流传播。",
+      "read_scope": "摘要、首页结构图文字说明、方法概览与实验结论",
+      "affiliation_evidence": "PDF 首页或作者署名信息",
+      "venue": "arXiv:2603.15031",
+      "url": "https://arxiv.org/abs/2603.15031",
+      "code": "https://github.com/MoonshotAI/Attention-Residuals",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "2505.09388",
+      "arxiv": "2505.09388",
+      "path": "2026/202610/2025-05-Qwen3-稠密与细粒度MoE架构基线",
+      "title": "Qwen3 Technical Report",
+      "subject": "稠密与细粒度MoE架构基线",
+      "published": "2025-05-14",
+      "archive_month": "202610",
+      "sources": [
+        "阿里 Qwen"
+      ],
+      "topics": [
+        "MoE与路由",
+        "残差连接与稳定性"
+      ],
+      "status": "速览",
+      "evidence_level": "A",
+      "priority": "第二梯队",
+      "kind": "厂商技术报告",
+      "owner": "阿里 Qwen",
+      "hook": "提供现代 dense 与 MoE LLM 的可对照基线：GQA、QK-Norm 与无共享专家的细粒度路由。",
+      "ideas": [
+        "MoE 配置含 128 个专家，每 token 激活 8 个，不保留共享专家。",
+        "使用 QK-Norm 稳定训练，配合全局 batch 的负载均衡目标。"
+      ],
+      "evidence": [
+        "发布 0.6B 至 235B 模型，报告列出各尺寸架构参数。"
+      ],
+      "limits": "Qwen3 thinking/non-thinking 能力主要还涉及训练与模板；不要当作两套不同骨干。",
+      "insight": "适合作为 GLM、Kimi 与 DeepSeek 对照表中的标准基线，避免每次讨论都从模型总参开始。",
+      "read_scope": "摘要、方法概览及实验结论",
+      "affiliation_evidence": "PDF 首页或作者署名信息",
+      "venue": "arXiv:2505.09388",
+      "url": "https://arxiv.org/abs/2505.09388",
+      "code": "",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "2505.06708",
+      "arxiv": "2505.06708",
+      "path": "2026/202610/2025-05-GatedAttention-输出门控与注意力汇聚现象",
+      "title": "Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free",
+      "subject": "输出门控与注意力汇聚现象",
+      "published": "2025-05-10",
+      "archive_month": "202610",
+      "sources": [
+        "阿里 Qwen",
+        "爱丁堡大学",
+        "Stanford",
+        "MIT",
+        "清华大学"
+      ],
+      "topics": [
+        "残差连接与稳定性",
+        "稀疏与局部注意力"
+      ],
+      "status": "速览",
+      "evidence_level": "B",
+      "priority": "第二梯队",
+      "kind": "学术论文",
+      "owner": "阿里 Qwen",
+      "hook": "在 SDPA 输出后加入 query-dependent sigmoid gate，系统检验门控位置、非线性和 attention sink。",
+      "ideas": [
+        "门控引入非线性并调节 attention 输出，而非改变为线性复杂度注意力。",
+        "比较多个位置和形式，分析稀疏门值与 attention sink、训练稳定性的关系。"
+      ],
+      "evidence": [
+        "30 多种变体、15B MoE 与 1.7B dense、3.5T token 实验。",
+        "公开模型与代码，具备相对丰富的架构消融。"
+      ],
+      "limits": "该门控与 DeltaNet 状态遗忘门不同，名称相似不能混淆机制。",
+      "insight": "优先复核门控位置、逐头/逐元素差异与等计算基线，是小改动架构实验的好样本。",
+      "read_scope": "作者署名、摘要、门控方法与实验概览",
+      "affiliation_evidence": "PDF 首页或作者署名信息",
+      "venue": "arXiv:2505.06708",
+      "url": "https://arxiv.org/abs/2505.06708",
+      "code": "https://github.com/qiuzh20/gated_attention",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "2501.08313",
+      "arxiv": "2501.08313",
+      "path": "2026/202610/2025-01-MiniMax01-LightningAttention与MoE的大规模组合",
+      "title": "MiniMax-01: Scaling Foundation Models with Lightning Attention",
+      "subject": "LightningAttention与MoE的大规模组合",
+      "published": "2025-01-14",
+      "archive_month": "202610",
+      "sources": [
+        "MiniMax"
+      ],
+      "topics": [
+        "线性注意力与SSM",
+        "MoE与路由",
+        "KV压缩与长上下文"
+      ],
+      "status": "速览",
+      "evidence_level": "A",
+      "priority": "第二梯队",
+      "kind": "厂商技术报告",
+      "owner": "MiniMax",
+      "hook": "把 Lightning Attention 与稀疏 MoE 扩展到数百 B 规模，面向百万级长上下文。",
+      "ideas": [
+        "混合线性注意力与 softmax attention，保留局部高效状态更新和全局访问能力。",
+        "结合专家并行与计算通信重叠，使架构收益能在训练和推理中实现。"
+      ],
+      "evidence": [
+        "456B 总参、45.9B 激活；训练上下文达 1M，报告外推至 4M 的实验。",
+        "公开 MiniMax-01 系列模型。"
+      ],
+      "limits": "4M 是报告中的推理外推设置，并不等于所有长上下文任务均保持同等质量。",
+      "insight": "与 Kimi Linear、Hunyuan-TurboS 对读，比较线性算子、保留 attention 的比例及实际状态内存。",
+      "read_scope": "摘要、方法概览及实验结论",
+      "affiliation_evidence": "PDF 首页或作者署名信息",
+      "venue": "arXiv:2501.08313",
+      "url": "https://arxiv.org/abs/2501.08313",
+      "code": "",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "2506.13585",
+      "arxiv": "2506.13585",
+      "path": "2026/202610/2025-06-MiniMaxM1-混合注意力模型的长推理验证",
+      "title": "MiniMax-M1: Scaling Test-Time Compute Efficiently with Lightning Attention",
+      "subject": "混合注意力模型的长推理验证",
+      "published": "2025-06-16",
+      "archive_month": "202610",
+      "sources": [
+        "MiniMax"
+      ],
+      "topics": [
+        "线性注意力与SSM",
+        "KV压缩与长上下文",
+        "后训练配套"
+      ],
+      "status": "速览",
+      "evidence_level": "A",
+      "priority": "第二梯队",
+      "kind": "厂商技术报告",
+      "owner": "MiniMax",
+      "hook": "以 MiniMax-Text-01 混合注意力骨干承载长上下文与长推理，验证其在 RL 工作负载中的效率。",
+      "ideas": [
+        "沿用 456B/45.9B MoE 与 Lightning Attention，不把 M1 误判为全新骨干。",
+        "RL 部分采用 CISPO；这属于后训练机制，与 attention 结构分列。"
+      ],
+      "evidence": [
+        "公开 40K/80K thinking budget 模型，原生支持 1M context。",
+        "作者报告完整 RL 训练的 GPU 配置与成本，便于架构与系统联合分析。"
+      ],
+      "limits": "成本与加速包含算法、硬件和实现因素，不能单独归功于 Lightning Attention。",
+      "insight": "本条主要用于验证“已有架构在长输出/RL 场景是否仍有效”，结构原理先读 MiniMax-01。",
+      "read_scope": "摘要、方法概览及实验结论",
+      "affiliation_evidence": "PDF 首页或作者署名信息",
+      "venue": "arXiv:2506.13585",
+      "url": "https://arxiv.org/abs/2506.13585",
+      "code": "https://github.com/MiniMax-AI/MiniMax-M1",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "2505.15431",
+      "arxiv": "2505.15431",
+      "path": "2026/202610/2025-05-HunyuanTurboS-Mamba与Transformer的工业级混合骨干",
+      "title": "Hunyuan-TurboS: Advancing Large Language Models through Mamba-Transformer Synergy and Adaptive Chain-of-Thought",
+      "subject": "Mamba与Transformer的工业级混合骨干",
+      "published": "2025-05-21",
+      "archive_month": "202610",
+      "sources": [
+        "腾讯 Hunyuan"
+      ],
+      "topics": [
+        "线性注意力与SSM",
+        "MoE与路由",
+        "KV压缩与长上下文"
+      ],
+      "status": "速览",
+      "evidence_level": "A",
+      "priority": "第二梯队",
+      "kind": "厂商技术报告",
+      "owner": "腾讯 Hunyuan",
+      "hook": "用 AMF/MF 交错模块组合 Attention、Mamba2 和 MoE FFN，在工业模型中降低长序列成本。",
+      "ideas": [
+        "报告按算子计 128 层：Attention 5.5%、Mamba2 44.5%、FFN 50%。",
+        "GQA 降低 KV 负担；MoE FFN 每步激活共享专家及部分专用专家。"
+      ],
+      "evidence": [
+        "560B 总参、56B 激活，16T token 预训练，支持 256K context。",
+        "报告陈述已工业部署；这不等同于公开完整权重。"
+      ],
+      "limits": "“层”的计数单位是算子层，和常见 Transformer block 数不可直接比较。",
+      "insight": "这篇是第二梯队应优先读的结构报告，AMF 顺序与比例比 CoT 产品模式更值得首先分析。",
+      "read_scope": "摘要、§2.2 Model Architecture、架构比例与训练配置",
+      "affiliation_evidence": "PDF 首页或作者署名信息",
+      "venue": "arXiv:2505.15431",
+      "url": "https://arxiv.org/abs/2505.15431",
+      "code": "",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "2609.27284",
+      "arxiv": "2609.27284",
+      "path": "2026/202610/2026-09-HunyuanA13B-低激活参数MoE模型设计",
+      "title": "Hunyuan-A13B Technical Report",
+      "subject": "低激活参数MoE模型设计",
+      "published": "2026-09-23",
+      "archive_month": "202610",
+      "sources": [
+        "腾讯 Hunyuan"
+      ],
+      "topics": [
+        "MoE与路由",
+        "KV压缩与长上下文"
+      ],
+      "status": "速览",
+      "evidence_level": "A",
+      "priority": "第二梯队",
+      "kind": "厂商技术报告",
+      "owner": "腾讯 Hunyuan",
+      "hook": "用 80B 总参数、13B 激活参数的 MoE 平衡通用能力与部署成本。",
+      "ideas": [
+        "将总容量与每 token 计算量分开控制，重点读模型规格与 attention 配置。",
+        "fast/slow thinking 属于推理模式与训练设计，不能直接视为新层结构。"
+      ],
+      "evidence": [
+        "官方报告提供 20T token 预训练和开放模型评估。"
+      ],
+      "limits": "报告的 arXiv 归档时间与产品首次发布可能不同，此处按论文日期索引。",
+      "insight": "适合作为较低激活预算模型对照，比较权重驻留开销与激活 FLOPs 的差别。",
+      "read_scope": "摘要、方法概览及实验结论",
+      "affiliation_evidence": "PDF 首页或作者署名信息",
+      "venue": "arXiv:2609.27284",
+      "url": "https://arxiv.org/abs/2609.27284",
+      "code": "",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "2504.13914",
+      "arxiv": "2504.13914",
+      "path": "2026/202610/2025-04-Seed1.5Thinking-稀疏骨干与大规模推理训练配套",
+      "title": "Seed1.5-Thinking: Advancing Superb Reasoning Models with Reinforcement Learning",
+      "subject": "稀疏骨干与大规模推理训练配套",
+      "published": "2025-04-10",
+      "archive_month": "202610",
+      "sources": [
+        "字节 Seed"
+      ],
+      "topics": [
+        "MoE与路由",
+        "后训练配套"
+      ],
+      "status": "速览",
+      "evidence_level": "A",
+      "priority": "第二梯队",
+      "kind": "厂商技术报告",
+      "owner": "字节 Seed",
+      "hook": "记录 Seed1.5-Thinking 的模型骨干与大规模推理训练方案，作为字节路线的基线材料。",
+      "ideas": [
+        "架构阅读限于公开模型规格与骨干组织。",
+        "把强化学习扩展与骨干创新分开，避免因模型能力强就认定有独立架构突破。"
+      ],
+      "evidence": [
+        "官方技术报告含预训练/后训练配置和推理能力评测。"
+      ],
+      "limits": "论文主贡献偏 RL，结构相关性低于 NSA、Kimi Linear 和 Hunyuan-TurboS。",
+      "insight": "本条列为厂商谱系补充，后续优先寻找 Seed 对 attention、MoE 或残差设计的专项消融。",
+      "read_scope": "摘要、方法概览及实验结论",
+      "affiliation_evidence": "PDF 首页或作者署名信息",
+      "venue": "arXiv:2504.13914",
+      "url": "https://arxiv.org/abs/2504.13914",
+      "code": "",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "2505.07062",
+      "arxiv": "2505.07062",
+      "path": "2026/202610/2025-05-Seed1.5VL-高效视觉编码与稀疏语言骨干",
+      "title": "Seed1.5-VL Technical Report",
+      "subject": "高效视觉编码与稀疏语言骨干",
+      "published": "2025-05-11",
+      "archive_month": "202610",
+      "sources": [
+        "字节 Seed"
+      ],
+      "topics": [
+        "多模态骨干",
+        "MoE与路由"
+      ],
+      "status": "速览",
+      "evidence_level": "A",
+      "priority": "第二梯队",
+      "kind": "厂商技术报告",
+      "owner": "字节 Seed",
+      "hook": "Seed1.5-VL 用原生动态分辨率 Seed-ViT、2×2 池化与 MLP 接入 20B 激活参数 MoE，控制高分辨率视觉 token 成本。",
+      "ideas": [
+        "532M Seed-ViT：27 层、14×14 patch、2D RoPE；原生变分辨率，按图像掩码打包 token。",
+        "视觉输出经相邻 2×2 平均池化，再经两层 MLP 接入 LLM；同等 patch 数下视觉序列缩短为四分之一。",
+        "保留视觉编码器以压缩高分辨率输入；编码器与语言骨干不对称还需要视觉 token 重分配来平衡训练负载。"
+      ],
+      "evidence": [
+        "PDF §2 / Table 1 给出模型组件与 Seed-ViT 超参；摘要报告 20B 激活语言骨干与 60 项公开基准。",
+        "§5.1 给出大规模预训练并行与负载均衡方案，公开 API 部署属于模型整体证据。"
+      ],
+      "limits": "多模态数据和训练规模会显著影响能力，不可用跨模型成绩替代结构消融。",
+      "insight": "与 Kimi K2.5、GLM-5V-Turbo 对照视觉编码器、token 压缩和联合训练方式。",
+      "read_scope": "摘要、§2 架构与 Table 1、训练系统概览",
+      "affiliation_evidence": "PDF 首页或作者署名信息",
+      "venue": "arXiv:2505.07062",
+      "url": "https://arxiv.org/abs/2505.07062",
+      "code": "",
+      "date_note": "arXiv 首次提交为 2025-05-11；PDF 正文另标 Date: June 13, 2025，时间表按 arXiv 首次提交索引。",
+      "title_verified": true
+    },
+    {
+      "key": "2505.07608",
+      "arxiv": "2505.07608",
+      "path": "2026/202610/2025-05-MiMo-多Token预测辅助的小模型推理骨干",
+      "title": "MiMo: Unlocking the Reasoning Potential of Language Model -- From Pretraining to Posttraining",
+      "subject": "多Token预测辅助的小模型推理骨干",
+      "published": "2025-05-12",
+      "archive_month": "202610",
+      "sources": [
+        "小米 MiMo"
+      ],
+      "topics": [
+        "多Token预测与投机解码",
+        "后训练配套"
+      ],
+      "status": "速览",
+      "evidence_level": "A",
+      "priority": "第二梯队",
+      "kind": "厂商技术报告",
+      "owner": "小米 MiMo",
+      "hook": "在 MiMo-7B 的预训练和后训练中联合考虑 MTP 与推理能力，兼顾解码效率。",
+      "ideas": [
+        "MTP 层在预训练和 SFT 中训练，官方实现说明在 RL 中冻结。",
+        "将 MTP 用于投机解码，评估其与模型推理能力、rollout 速度之间的关系。"
+      ],
+      "evidence": [
+        "官方公开模型和 MTP 推理支持；报告覆盖从预训练到后训练。"
+      ],
+      "limits": "MTP 接受率受模型、采样参数与任务分布影响，不能把官方示例的比例视为普适值。",
+      "insight": "适合连接结构设计与 RL rollout 成本；与 GLM 的 MoE MTP 以及 MiMo-V2-Flash 的轻量模块对比。",
+      "read_scope": "摘要、官方 README 的 MTP 训练/推理说明及模型概览",
+      "affiliation_evidence": "PDF 首页或作者署名信息",
+      "venue": "arXiv:2505.07608",
+      "url": "https://arxiv.org/abs/2505.07608",
+      "code": "https://github.com/XiaomiMiMo/MiMo",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "2601.02780",
+      "arxiv": "2601.02780",
+      "path": "2026/202610/2026-01-MiMoV2Flash-局部全局混合注意力与轻量MTP",
+      "title": "MiMo-V2-Flash Technical Report",
+      "subject": "局部全局混合注意力与轻量MTP",
+      "published": "2026-01-06",
+      "archive_month": "202610",
+      "sources": [
+        "小米 MiMo"
+      ],
+      "topics": [
+        "稀疏与局部注意力",
+        "KV压缩与长上下文",
+        "多Token预测与投机解码",
+        "MoE与路由"
+      ],
+      "status": "速览",
+      "evidence_level": "A",
+      "priority": "第二梯队",
+      "kind": "厂商技术报告",
+      "owner": "小米 MiMo",
+      "hook": "用 5:1 的局部/全局注意力和轻量 MTP，在 309B/15B MoE 上降低推理成本。",
+      "ideas": [
+        "采用 128-token 滑动窗口与全局 attention 交错，并引入可学习 attention sink bias。",
+        "MTP 使用轻量 dense FFN 模块，需区别于骨干 MoE。"
+      ],
+      "evidence": [
+        "官方模型说明列出 309B 总参、15B 激活以及公开的 MTP 权重。"
+      ],
+      "limits": "模型 2025 年已发布，论文 arXiv 编号为 2026-01；两者不能混作同一发布日期。",
+      "insight": "优先检查全局层比例、KV 内存与短窗的信息瓶颈，避免将 MTP 吞吐提升误作 attention 加速。",
+      "read_scope": "官方 README 架构章节及论文元信息",
+      "affiliation_evidence": "PDF 首页或作者署名信息",
+      "venue": "arXiv:2601.02780",
+      "url": "https://arxiv.org/abs/2601.02780",
+      "code": "https://github.com/XiaomiMiMo/MiMo-V2-Flash",
+      "date_note": "模型官方 README 引用 2025-12-16 发布资料；本条作为技术报告按 arXiv 发表时间索引。",
+      "title_verified": true
+    },
+    {
+      "key": "2507.07955",
+      "arxiv": "2507.07955",
+      "path": "2026/202610/2025-07-HNet-动态分块的端到端层次语言模型",
+      "title": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling",
+      "subject": "动态分块的端到端层次语言模型",
+      "published": "2025-07-10",
+      "archive_month": "202610",
+      "sources": [
+        "CMU",
+        "Cartesia"
+      ],
+      "topics": [
+        "分词与层次建模"
+      ],
+      "status": "速览",
+      "evidence_level": "B",
+      "priority": "高校实验室",
+      "kind": "学术论文",
+      "owner": "CMU",
+      "hook": "从字节输入学习动态分块，统一传统分词、语言建模与还原流程。",
+      "ideas": [
+        "动态 chunking 按内容与上下文学习边界。",
+        "层次网络在不同压缩粒度处理序列，并端到端训练。"
+      ],
+      "evidence": [
+        "有计算与数据匹配实验，覆盖英文、中文、代码和 DNA 等输入。"
+      ],
+      "limits": "与前沿通用模型仍存在规模和训练条件差异；字节模型的 token 数不能与 BPE token 数直接比较。",
+      "insight": "这是 tokenization 是否应可学习的重点论文；比较时应固定原始字节或数据量和 FLOPs。",
+      "read_scope": "摘要、方法概览及实验结论",
+      "affiliation_evidence": "PDF 首页或作者署名信息",
+      "venue": "arXiv:2507.07955",
+      "url": "https://arxiv.org/abs/2507.07955",
+      "code": "",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "2603.15569",
+      "arxiv": "2603.15569",
+      "path": "2026/202610/2026-03-Mamba3-复数状态与MIMO的高效序列模型",
+      "title": "Mamba-3: Improved Sequence Modeling using State Space Principles",
+      "subject": "复数状态与MIMO的高效序列模型",
+      "published": "2026-03-16",
+      "archive_month": "202610",
+      "sources": [
+        "CMU",
+        "Princeton",
+        "Together AI",
+        "Cartesia"
+      ],
+      "topics": [
+        "线性注意力与SSM"
+      ],
+      "status": "速览",
+      "evidence_level": "B",
+      "priority": "高校实验室",
+      "kind": "学术论文",
+      "owner": "CMU",
+      "hook": "从 SSM 离散化、复数状态更新与 MIMO 三方面提高表达能力和推理效率。",
+      "ideas": [
+        "更有表达力的递推来自新的离散化方式。",
+        "复数状态增强状态追踪；MIMO 改善模型能力与硬件利用。"
+      ],
+      "evidence": [
+        "报告 1.5B 规模语言建模、检索与状态追踪实验。",
+        "比较不同状态大小与 Mamba-2、Gated DeltaNet 等基线。"
+      ],
+      "limits": "该实验规模与数百 B 工业混合模型不同，不能直接视为全面替代 Transformer 的证据。",
+      "insight": "关注状态容量、训练成本与 decode 延迟三者的折中，而不只看线性复杂度标签。",
+      "read_scope": "摘要、方法概览及实验结论",
+      "affiliation_evidence": "PDF 首页或作者署名信息",
+      "venue": "arXiv:2603.15569",
+      "url": "https://arxiv.org/abs/2603.15569",
+      "code": "",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "2502.05171",
+      "arxiv": "2502.05171",
+      "path": "2026/202610/2025-02-Huginn-共享递归深度的隐空间推理",
+      "title": "Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach",
+      "subject": "共享递归深度的隐空间推理",
+      "published": "2025-02-07",
+      "archive_month": "202610",
+      "sources": [
+        "University of Maryland",
+        "ELLIS与MPI",
+        "LLNL"
+      ],
+      "topics": [
+        "循环与自适应深度",
+        "记忆与隐空间计算"
+      ],
+      "status": "速览",
+      "evidence_level": "B",
+      "priority": "高校实验室",
+      "kind": "学术论文",
+      "owner": "University of Maryland",
+      "hook": "重复运行共享模块，在隐空间增加测试时计算深度。",
+      "ideas": [
+        "递归块共享参数，推理时可展开更多步。",
+        "研究递归计算与 KV 管理，区分参数量、计算量和输出 token 数。"
+      ],
+      "evidence": [
+        "3.5B 参数、800B token 预训练，公开模型与代码。"
+      ],
+      "limits": "增加递归步数不保证任意任务单调改善，需要关注过度迭代与训练深度分布。",
+      "insight": "适合作为已有循环 Transformer 归档的规模实验基线，连接理论表达能力与实际语言模型。",
+      "read_scope": "摘要、方法概览及实验结论",
+      "affiliation_evidence": "PDF 首页或作者署名信息",
+      "venue": "arXiv:2502.05171",
+      "url": "https://arxiv.org/abs/2502.05171",
+      "code": "https://github.com/seal-rg/recurrent-pretraining",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "2507.10524",
+      "arxiv": "2507.10524",
+      "path": "2026/202610/2025-07-MoR-按Token路由的动态递归深度",
+      "title": "Mixture-of-Recursions: Learning Dynamic Recursive Depths for Adaptive Token-Level Computation",
+      "subject": "按Token路由的动态递归深度",
+      "published": "2025-07-14",
+      "archive_month": "202610",
+      "sources": [
+        "KAIST",
+        "Mila",
+        "Google"
+      ],
+      "topics": [
+        "循环与自适应深度",
+        "记忆与隐空间计算"
+      ],
+      "status": "速览",
+      "evidence_level": "B",
+      "priority": "高校实验室",
+      "kind": "学术论文",
+      "owner": "KAIST",
+      "hook": "通过共享层和 token 级路由，在同一个递归 Transformer 中同时减少参数和动态分配计算。",
+      "ideas": [
+        "路由器为 token 分配递归深度。",
+        "设计递归缓存策略，减少冗余内存访问并支持实际吞吐。"
+      ],
+      "evidence": [
+        "有预训练、等 FLOPs 分析以及推理吞吐评估。"
+      ],
+      "limits": "动态深度带来调度和批处理复杂性；理论跳过计算未必等量转化为延迟收益。",
+      "insight": "与 Huginn 对读，把共享参数与自适应计算两个维度拆开，避免把二者收益混在一起。",
+      "read_scope": "摘要、方法概览及实验结论",
+      "affiliation_evidence": "PDF 首页或作者署名信息",
+      "venue": "arXiv:2507.10524",
+      "url": "https://arxiv.org/abs/2507.10524",
+      "code": "",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "2512.23675",
+      "arxiv": "2512.23675",
+      "path": "2026/202610/2025-12-TTTE2E-测试时更新权重的长上下文记忆",
+      "title": "End-to-End Test-Time Training for Long Context",
+      "subject": "测试时更新权重的长上下文记忆",
+      "published": "2025-12-29",
+      "archive_month": "202610",
+      "sources": [
+        "Stanford",
+        "UC Berkeley",
+        "UC San Diego",
+        "NVIDIA",
+        "Astera Institute"
+      ],
+      "topics": [
+        "记忆与隐空间计算",
+        "KV压缩与长上下文"
+      ],
+      "status": "速览",
+      "evidence_level": "B",
+      "priority": "高校实验室",
+      "kind": "学术论文",
+      "owner": "Stanford",
+      "hook": "在滑动窗口 Transformer 上通过测试时 next-token 学习，把上下文信息压入权重。",
+      "ideas": [
+        "训练时用元学习优化适合测试时学习的初始化。",
+        "测试时继续 next-token prediction，以参数更新作为长上下文记忆通路。"
+      ],
+      "evidence": [
+        "报告 3B 模型、164B token 训练与长上下文扩展实验。",
+        "128K 延迟结果依赖报告中的硬件与实现。"
+      ],
+      "limits": "骨干仍是标准滑动窗口 Transformer，本条主要是学习与记忆机制，不应写成全新 attention 算子。",
+      "insight": "适合比较三类记忆：KV cache、递归状态、可更新权重；要把测试时更新成本纳入预算。",
+      "read_scope": "摘要、方法概览及实验结论",
+      "affiliation_evidence": "PDF 首页或作者署名信息",
+      "venue": "arXiv:2512.23675",
+      "url": "https://arxiv.org/abs/2512.23675",
+      "code": "",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "2502.09992",
+      "arxiv": "2502.09992",
+      "path": "2026/202610/2025-02-LLaDA-掩码扩散语言模型的规模验证",
+      "title": "Large Language Diffusion Models",
+      "subject": "掩码扩散语言模型的规模验证",
+      "published": "2025-02-14",
+      "archive_month": "202610",
+      "sources": [
+        "中国人民大学",
+        "蚂蚁集团"
+      ],
+      "topics": [
+        "扩散与非自回归建模"
+      ],
+      "status": "速览",
+      "evidence_level": "B",
+      "priority": "高校实验室",
+      "kind": "学术论文",
+      "owner": "中国人民大学",
+      "hook": "从头训练掩码扩散语言模型，检验核心语言能力是否必须依赖自回归生成。",
+      "ideas": [
+        "前向掩码与反向去噪过程用 Transformer 参数化。",
+        "通过扩散目标预训练并执行 SFT，生成时反复预测掩码位置。"
+      ],
+      "evidence": [
+        "LLaDA 8B 的从头预训练、SFT 与自回归基线比较，公开模型。"
+      ],
+      "limits": "并行去噪不自动等于端到端更快；需要考虑去噪步数、cache 可复用性与生成质量。",
+      "insight": "与 Block Diffusion 对照生成因果性和缓存结构，比单看数学 benchmark 更能理解架构取舍。",
+      "read_scope": "摘要、方法概览及实验结论",
+      "affiliation_evidence": "PDF 首页或作者署名信息",
+      "venue": "arXiv:2502.09992",
+      "url": "https://arxiv.org/abs/2502.09992",
+      "code": "",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "2503.02130",
+      "arxiv": "2503.02130",
+      "path": "2026/202610/2025-03-FoX-带遗忘门的Softmax注意力",
+      "title": "Forgetting Transformer: Softmax Attention with a Forget Gate",
+      "subject": "带遗忘门的Softmax注意力",
+      "published": "2025-03-03",
+      "archive_month": "202610",
+      "sources": [
+        "Mila",
+        "Université de Montréal",
+        "MakerMaker AI"
+      ],
+      "topics": [
+        "稀疏与局部注意力",
+        "记忆与隐空间计算"
+      ],
+      "status": "速览",
+      "evidence_level": "B",
+      "priority": "高校实验室",
+      "kind": "学术论文",
+      "owner": "作者团队待核验",
+      "hook": "在 softmax attention 中引入遗忘门，使模型按内容控制历史信息的衰减。",
+      "ideas": [
+        "对历史注意力贡献施加数据相关遗忘，而不是只使用固定位置衰减。",
+        "保持 softmax 检索性质，研究与其他递归/门控机制的关系。"
+      ],
+      "evidence": [
+        "论文提供语言建模与长上下文相关实验。"
+      ],
+      "limits": "带门控的 softmax attention 不等于线性 attention；两者复杂度和状态表达不同。",
+      "insight": "与 Gated Attention 对照门放在哪里：历史权重衰减与输出调制会形成不同归纳偏置。",
+      "read_scope": "摘要、方法概览及实验结论",
+      "affiliation_evidence": "PDF 首页：Mila / Université de Montréal 与 MakerMaker AI；脚注说明部分工作在 Google DeepMind 完成。",
+      "venue": "arXiv:2503.02130",
+      "url": "https://arxiv.org/abs/2503.02130",
+      "code": "",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "2503.09573",
+      "arxiv": "2503.09573",
+      "path": "2026/202610/2025-03-BlockDiffusion-块间自回归与块内扩散生成",
+      "title": "Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models",
+      "subject": "块间自回归与块内扩散生成",
+      "published": "2025-03-12",
+      "archive_month": "202610",
+      "sources": [
+        "Cornell",
+        "Stanford",
+        "Cohere"
+      ],
+      "topics": [
+        "扩散与非自回归建模",
+        "KV压缩与长上下文"
+      ],
+      "status": "速览",
+      "evidence_level": "B",
+      "priority": "高校实验室",
+      "kind": "学术论文",
+      "owner": "Cornell",
+      "hook": "块间采用自回归、块内采用扩散，兼顾可变长度生成和 KV cache 复用。",
+      "ideas": [
+        "用 block-causal mask 参数化块条件分布。",
+        "配套训练算法与噪声日程控制梯度方差，支持块内并行采样。"
+      ],
+      "evidence": [
+        "论文提供语言建模实验、公开代码与权重。",
+        "§3.1 明确说明块条件分布与可输入/输出的缓存结构。"
+      ],
+      "limits": "块大小影响并行性与质量，不能用纯 AR 或纯 diffusion 的最佳设置直接替代公平比较。",
+      "insight": "适合从系统角度理解扩散 LLM：缓存边界由概率分解与 attention mask 一起决定。",
+      "read_scope": "首页署名、§3.1 分布与架构、摘要与实验概览",
+      "affiliation_evidence": "PDF 首页或作者署名信息",
+      "venue": "arXiv:2503.09573",
+      "url": "https://arxiv.org/abs/2503.09573",
+      "code": "https://github.com/kuleshov-group/bd3lms",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "2502.08524",
+      "arxiv": "2502.08524",
+      "path": "2026/202610/2025-02-CoCoMix-连续概念与Token混合的预训练",
+      "title": "LLM Pretraining with Continuous Concepts",
+      "subject": "连续概念与Token混合的预训练",
+      "published": "2025-02-12",
+      "archive_month": "202610",
+      "sources": [
+        "Meta FAIR",
+        "KAIST",
+        "UC San Diego"
+      ],
+      "topics": [
+        "记忆与隐空间计算",
+        "分词与层次建模"
+      ],
+      "status": "速览",
+      "evidence_level": "B",
+      "priority": "高校实验室",
+      "kind": "学术论文",
+      "owner": "Meta FAIR",
+      "hook": "探索连续概念表示与 token 预测结合的语言模型预训练方式。",
+      "ideas": [
+        "用预训练 sparse autoencoder 提取连续概念，预测后与 token hidden states 交错混合。",
+        "同时训练概念与 token 预测，探索样本效率和概念可操控性。"
+      ],
+      "evidence": [
+        "论文提供预训练和下游评估。"
+      ],
+      "limits": "该条涉及表示学习与训练目标，结构相关性弱于 H-Net 或递归深度模型。",
+      "insight": "作为隐空间表示路线补充，与 H-Net 的可学习分块及 Huginn 的递归状态区分。",
+      "read_scope": "HTML v1 作者署名、摘要、方法概览",
+      "affiliation_evidence": "arXiv HTML v1 作者署名",
+      "venue": "arXiv:2502.08524",
+      "url": "https://arxiv.org/abs/2502.08524",
+      "code": "",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "2503.14456",
+      "arxiv": "2503.14456",
+      "path": "2026/202610/2025-03-RWKV7-广义Delta更新的线性序列模型",
+      "title": "RWKV-7 \"Goose\" with Expressive Dynamic State Evolution",
+      "subject": "广义Delta更新的线性序列模型",
+      "published": "2025-03-18",
+      "archive_month": "202610",
+      "sources": [
+        "RWKV团队",
+        "EleutherAI",
+        "清华大学",
+        "纽约大学",
+        "浙江大学",
+        "其他联合高校"
+      ],
+      "topics": [
+        "线性注意力与SSM"
+      ],
+      "status": "速览",
+      "evidence_level": "B",
+      "priority": "高校实验室",
+      "kind": "学术论文",
+      "owner": "RWKV团队",
+      "hook": "通过广义 delta 更新研究兼顾表达能力与线性序列处理的 RWKV-7 模型。",
+      "ideas": [
+        "以可训练的状态更新替代完整 KV 历史访问。",
+        "关注状态追踪能力与并行训练/递归推理之间的对应关系。"
+      ],
+      "evidence": [
+        "报告 0.19B 至 2.9B 模型、3.1T token 多语料，公开权重、训练推理代码和数据组成。"
+      ],
+      "limits": "结构性质和实际能力需要分别比较；不同训练数据、规模下分数不可当作算子消融。",
+      "insight": "与 Mamba-3、Kimi KDA 对照状态更新形式和容量，寻找表达能力与硬件效率之间的关系。",
+      "read_scope": "PDF 首页署名、摘要与方法概览",
+      "affiliation_evidence": "PDF 第1页列出16个署名单位，索引保留主要及目标来源",
+      "venue": "arXiv:2503.14456",
+      "url": "https://arxiv.org/abs/2503.14456",
+      "code": "https://github.com/RWKV/RWKV-LM",
+      "date_note": "",
+      "title_verified": true
+    },
+    {
+      "key": "qwen3-next-model-card",
+      "path": "2026/202610/2025-09-Qwen3Next-门控Delta与高稀疏MoE混合骨干",
+      "title": "Qwen3-Next-80B-A3B-Instruct",
+      "subject": "门控Delta与高稀疏MoE混合骨干",
+      "published": "2025-09",
+      "archive_month": "202610",
+      "sources": [
+        "阿里 Qwen"
+      ],
+      "topics": [
+        "线性注意力与SSM",
+        "MoE与路由",
+        "多Token预测与投机解码"
+      ],
+      "status": "速览",
+      "evidence_level": "A",
+      "priority": "第二梯队",
+      "kind": "厂商技术报告",
+      "owner": "阿里 Qwen",
+      "hook": "以 Gated DeltaNet 与 Gated Attention 的 3:1 组合和高稀疏 MoE 构建 80B/3B 模型。",
+      "ideas": [
+        "48 层按 12 组组织，每组 3 层 Gated DeltaNet 与 1 层 Gated Attention。",
+        "官方模型卡列出 512 个专家及 MTP 支持；细节以固定快照为准。"
+      ],
+      "evidence": [
+        "官方公开 80B 总参、3B 激活的模型权重，模型卡公开配置及部署入口。"
+      ],
+      "limits": "本条是官方模型卡，非独立学术论文。吞吐与训练成本为官方测试结果，不是所有 workload 的保证。",
+      "insight": "与 Kimi Linear 对照线性算子、混合比例和专家粒度，比跨榜单比较更能解释结构差异。",
+      "read_scope": "官方模型卡特性与架构配置",
+      "affiliation_evidence": "Qwen 官方 Hugging Face 模型页",
+      "venue": "官方 Hugging Face 模型卡",
+      "url": "https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct",
+      "download_url": "https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct/raw/main/README.md",
+      "source_file": "original/README.md",
+      "authors": "Qwen Team",
+      "code": "",
+      "date_note": "官方模型发布月；下载日仅记录快照，不作为新发表时间。",
+      "title_verified": true
+    },
+    {
+      "key": "2502.13685",
+      "arxiv": "2502.13685",
+      "path": "2026/202610/2025-02-MoM-多记忆状态路由的线性序列模型",
+      "title": "MoM: Linear Sequence Modeling with Mixture-of-Memories",
+      "subject": "多记忆状态路由的线性序列模型",
+      "published": "2025-02-19",
+      "archive_month": "202610",
+      "sources": [
+        "清华大学",
+        "复旦大学",
+        "上海人工智能实验室",
+        "香港科技大学广州",
+        "香港中文大学"
+      ],
+      "topics": [
+        "线性注意力与SSM",
+        "记忆与隐空间计算"
+      ],
+      "status": "速览",
+      "evidence_level": "B",
+      "priority": "高校实验室",
+      "kind": "学术论文",
+      "owner": "清华大学",
+      "hook": "用路由器将 token 分配给多个独立记忆状态，缓解单一固定状态的容量和干扰瓶颈。",
+      "ideas": [
+        "多个记忆状态独立更新，路由器决定 token 写入哪个状态。",
+        "框架可搭配不同线性状态更新机制；每状态仍保留线性训练与固定状态推理形式。"
+      ],
+      "evidence": [
+        "报告回忆密集任务和下游语言建模比较，公开代码。"
+      ],
+      "limits": "更多状态意味着更高总内存；固定状态复杂度不代表与单状态模型等资源。",
+      "insight": "与 KDA、Mamba 对照时固定总状态容量和激活状态数，检验提升来自路由还是单纯增加记忆。",
+      "read_scope": "arXiv HTML 署名、摘要与方法概览",
+      "affiliation_evidence": "arXiv HTML 作者署名；以归档版本为准",
+      "venue": "arXiv:2502.13685",
+      "url": "https://arxiv.org/abs/2502.13685",
+      "code": "https://github.com/OpenSparseLLMs/MoM",
+      "date_note": "按 arXiv 首发日期索引；合作机构按归档版本署名。",
+      "title_verified": true
+    },
+    {
+      "key": "2503.05447",
+      "arxiv": "2503.05447",
+      "path": "2026/202610/2025-03-LinearMoE-线性序列算子与MoE的统一训练系统",
+      "title": "Linear-MoE: Linear Sequence Modeling Meets Mixture-of-Experts",
+      "subject": "线性序列算子与MoE的统一训练系统",
+      "published": "2025-03-07",
+      "archive_month": "202610",
+      "sources": [
+        "上海人工智能实验室",
+        "华南理工大学",
+        "苏州大学",
+        "香港中文大学"
+      ],
+      "topics": [
+        "线性注意力与SSM",
+        "MoE与路由",
+        "训练系统与可复现性"
+      ],
+      "status": "速览",
+      "evidence_level": "B",
+      "priority": "高校实验室",
+      "kind": "学术论文",
+      "owner": "上海人工智能实验室",
+      "hook": "统一线性序列算子与 MoE 的模型和训练系统，并支持与标准 Transformer-MoE 混合。",
+      "ideas": [
+        "建模子系统统一多类线性序列模型，训练子系统实现序列等并行策略。",
+        "支持 Linear-MoE 与 Transformer-MoE 混合，为架构组合提供统一实验平台。"
+      ],
+      "evidence": [
+        "报告 A0.3B-2B 与 A1B-7B 系列实验，公开代码。"
+      ],
+      "limits": "作者称 production-level system 不等价于已验证前沿旗舰规模；需要核对相同实现成熟度下的对比。",
+      "insight": "与本次统一归档脚本的理念相似，研究中也应通过换配置比较算子，避免每种结构另建不公平训练栈。",
+      "read_scope": "arXiv HTML 署名、摘要与方法概览",
+      "affiliation_evidence": "arXiv HTML 作者署名；以归档版本为准",
+      "venue": "arXiv:2503.05447",
+      "url": "https://arxiv.org/abs/2503.05447",
+      "code": "https://github.com/OpenSparseLLMs/Linear-MoE",
+      "date_note": "按 arXiv 首发日期索引；合作机构按归档版本署名。",
+      "title_verified": true
+    },
+    {
+      "key": "2502.07864",
+      "arxiv": "2502.07864",
+      "path": "2026/202610/2025-02-TransMLA-GQA到潜在注意力的结构迁移",
+      "title": "TransMLA: Multi-Head Latent Attention Is All You Need",
+      "subject": "GQA到潜在注意力的结构迁移",
+      "published": "2025-02-11",
+      "archive_month": "202610",
+      "sources": [
+        "北京大学",
+        "BIGAI",
+        "腾讯优图",
+        "小米 MiMo"
+      ],
+      "topics": [
+        "KV压缩与长上下文"
+      ],
+      "status": "速览",
+      "evidence_level": "B",
+      "priority": "高校实验室",
+      "kind": "学术论文",
+      "owner": "北京大学",
+      "hook": "研究从现有 GQA 模型迁移到 MLA，以潜在 KV 表示降低缓存压力。",
+      "ideas": [
+        "利用 MLA 的低秩潜在 KV 与上投影，在容量、计算和通信之间交换。",
+        "研究将已有 GQA 权重转为 MLA 并继续训练，而非全部从头预训练。"
+      ],
+      "evidence": [
+        "论文给出迁移与微调比较，公开实现。"
+      ],
+      "limits": "转换后额外训练成本和解码 kernel 必须计入；“all you need”是论文题名，不是普适结论。",
+      "insight": "对于存量模型，结构迁移可能比新预训练更有用；关注质量恢复预算、KV 压缩率和吞吐实测。",
+      "read_scope": "arXiv HTML 署名、摘要与方法概览",
+      "affiliation_evidence": "v5 PDF 首页：Peking University、BIGAI、Tencent Youtu Lab、Xiaomi Corp.；小米为合作者公司归属，不表示本工作是 MiMo 模型技术报告。",
+      "venue": "arXiv:2502.07864",
+      "url": "https://arxiv.org/abs/2502.07864",
+      "code": "https://github.com/fxmeng/TransMLA",
+      "date_note": "按 arXiv 首发日期索引；合作机构按归档版本署名。 页面元数据标题为 TransMLA: Multi-Head Latent Attention Is All You Need，v5 PDF 首页简写为 TransMLA: MLA Is All You Need。",
+      "title_verified": true
+    },
+    {
+      "key": "2509.26541",
+      "arxiv": "2509.26541",
+      "path": "2026/202610/2025-09-TASP-拓扑感知的长上下文序列并行",
+      "title": "TASP: Topology-aware Sequence Parallelism",
+      "subject": "拓扑感知的长上下文序列并行",
+      "published": "2025-09-30",
+      "archive_month": "202610",
+      "sources": [
+        "上海交通大学",
+        "清华大学",
+        "首都师范大学",
+        "无问芯穹"
+      ],
+      "topics": [
+        "训练系统与可复现性",
+        "KV压缩与长上下文"
+      ],
+      "status": "速览",
+      "evidence_level": "B",
+      "priority": "高校实验室",
+      "kind": "学术论文",
+      "owner": "上海交通大学",
+      "hook": "通过多条正交环的数据通路提高序列并行通信效率，作为长上下文架构的系统配套。",
+      "ideas": [
+        "将加速器拓扑分解为多个可并行的环通路，提高 Ring AllGather 对互连链路的利用。",
+        "设计数据放置与 AlltoAll 承载的并发环传输，服务精确 attention 的长序列执行。"
+      ],
+      "evidence": [
+        "报告单节点、多节点实验和开销分析，公开 HamiltonAttention 实现。"
+      ],
+      "limits": "这是序列并行与通信系统论文，不是新的模型骨干；作为上交相关配套工作单列，不拿它冒充模型架构创新。",
+      "insight": "当 attention 架构变化引入新并行策略时，应把模型算子收益与拓扑利用率收益分开评估。",
+      "read_scope": "HTML v2 署名脚注、摘要、设计与实验章节概览",
+      "affiliation_evidence": "HTML v2 作者单位脚注含 Shanghai Jiao Tong University、Tsinghua University 等",
+      "venue": "arXiv:2509.26541",
+      "url": "https://arxiv.org/abs/2509.26541",
+      "code": "https://github.com/infinigence/HamiltonAttention",
+      "date_note": "按 v1 首发日期索引；v2 为 2025-10-09。",
+      "title_verified": true
+    }
+  ],
+  "coverage_note": "这是一份重点筛选目录，不宣称穷尽所有 2025 年以来工作。第一梯队优先选取可核查结构的技术报告；第二梯队中后训练主导的报告单列“后训练配套”。清华、北大、复旦、Stanford、MIT、UC Berkeley 均有作者署名可核验的相关条目；上海交通大学本轮纳入 TASP，明确是长上下文并行系统配套，纯模型结构重点工作仍需继续补充。合作论文按多来源标签检索，不按姓名猜测学校。历史条目保留原阅读状态并标 H，未重新验证其全部结论。",
+  "month_preserved_notes": "## 保留的工程资料\n\n\n- [Megatron-LM 本地源码与版本审计文档集](../../../../0-code/training/third-party/Megatron-LM-docs/00-README.md)：04.1 专题区分本地开发快照、正式 0.19 与最新主线。\n- [Megatron-LM 0.19.2 确定性入口源码](https://github.com/NVIDIA/Megatron-LM/blob/4b4acac9a1d28ea6829c8d4f566d75698a21249d/megatron/training/determinism.py)。\n- [FlashAttention 确定性反向实现说明](https://github.com/Dao-AILab/flash-attention)。\n- [PyTorch 可复现性文档](https://docs.pytorch.org/docs/stable/notes/randomness.html)。\n\n上述为代码或在线文档，保留链接，不计入论文 PDF 数量。\n\n",
+  "source_groups": [
+    {
+      "label": "第一梯队厂商",
+      "sources": [
+        "DeepSeek",
+        "智谱 GLM",
+        "Moonshot Kimi"
+      ]
+    },
+    {
+      "label": "第二梯队厂商",
+      "sources": [
+        "阿里 Qwen",
+        "MiniMax",
+        "腾讯 Hunyuan",
+        "腾讯优图",
+        "字节 Seed",
+        "小米 MiMo",
+        "蚂蚁集团"
+      ]
+    },
+    {
+      "label": "重点高校",
+      "sources": [
+        "清华大学",
+        "北京大学",
+        "复旦大学",
+        "上海交通大学",
+        "Stanford",
+        "MIT",
+        "UC Berkeley",
+        "CMU",
+        "Princeton",
+        "Cornell"
+      ]
+    },
+    {
+      "label": "其他高校与实验室",
+      "sources": [
+        "中国人民大学",
+        "KAIST",
+        "Mila",
+        "UC San Diego"
+      ]
+    }
+  ]
+}

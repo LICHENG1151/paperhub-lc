@@ -1,0 +1,30 @@
+{
+  "id": "2512.23675",
+  "title": "End-to-End Test-Time Training for Long Context",
+  "date": "2025-12-29",
+  "authors": [
+    "Tandon, Arnuv",
+    "Dalal, Karan",
+    "Li, Xinhao",
+    "Koceja, Daniel",
+    "Rød, Marcel",
+    "Buchanan, Sam",
+    "Wang, Xiaolong",
+    "Leskovec, Jure",
+    "Koyejo, Sanmi",
+    "Hashimoto, Tatsunori",
+    "Guestrin, Carlos",
+    "McCaleb, Jed",
+    "Choi, Yejin",
+    "Sun, Yu"
+  ],
+  "abstract": "We formulate long-context language modeling as a problem in continual learning rather than architecture design. Under this formulation, we only use a standard architecture -- a Transformer with sliding-window attention. However, our model continues learning at test time via next-token prediction on the given context, compressing the context it reads into its weights. In addition, we improve the model's initialization for learning at test time via meta-learning at training time. Overall, our method, a form of Test-Time Training (TTT), is End-to-End (E2E) both at test time (via next-token prediction) and training time (via meta-learning), in contrast to previous forms. We conduct extensive experiments with a focus on scaling properties. In particular, for 3B models trained with 164B tokens, our method (TTT-E2E) scales with context length in the same way as Transformer with full attention, while others, such as Mamba 2 and Gated DeltaNet, do not. However, similar to RNNs, TTT-E2E has constant inference latency regardless of context length, making it 2.7 times faster than full attention for 128K context. Our code is publicly available.",
+  "pdf": "2512.23675v2.pdf",
+  "pages": 29,
+  "sha256": "e1390e9347fe339e31205351420bfddcfb1f5cfa540841706228c07184b7ec7a",
+  "url": "https://arxiv.org/abs/2512.23675",
+  "version": "v2",
+  "file": "2512.23675v2.pdf",
+  "download_url": "https://arxiv.org/pdf/2512.23675v2",
+  "retrieved": "2026-10-12"
+}

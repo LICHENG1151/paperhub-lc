@@ -1,0 +1,32 @@
+{
+  "id": "2503.14456",
+  "title": "RWKV-7 \"Goose\" with Expressive Dynamic State Evolution",
+  "date": "2025-03-18",
+  "authors": [
+    "Peng, Bo",
+    "Zhang, Ruichong",
+    "Goldstein, Daniel",
+    "Alcaide, Eric",
+    "Du, Xingjian",
+    "Hou, Haowen",
+    "Lin, Jiaju",
+    "Liu, Jiaxing",
+    "Lu, Janna",
+    "Merrill, William",
+    "Song, Guangyu",
+    "Tan, Kaifeng",
+    "Utpala, Saiteja",
+    "Wilce, Nathan",
+    "Wind, Johan S.",
+    "Wu, Tianyi",
+    "Wuttke, Daniel",
+    "Zhou-Zheng, Christian"
+  ],
+  "abstract": "We present RWKV-7 \"Goose\", a new sequence modeling architecture with constant memory usage and constant inference time per token. Despite being trained on dramatically fewer tokens than other top models, our 2.9 billion parameter language model achieves a new 3B SoTA on multilingual tasks and matches the current 3B SoTA on English language downstream performance. RWKV-7 introduces a newly generalized formulation of the delta rule with vector-valued gating and in-context learning rates, as well as a relaxed value replacement rule. We show that RWKV-7 can perform state tracking and recognize all regular languages, while retaining parallelizability of training. This exceeds the capabilities of Transformers under standard complexity conjectures, which are limited to $\\mathsf{TC}^0$. To demonstrate RWKV-7's language modeling capability, we also present an extended open source 3.1 trillion token multilingual corpus, and train four RWKV-7 models ranging from 0.19 billion to 2.9 billion parameters on this dataset. To foster openness, reproduction, and adoption, we release our models and dataset component listing at https://huggingface.co/RWKV, and our training and inference code at https://github.com/RWKV/RWKV-LM all under the Apache 2.0 License.",
+  "version": "v2",
+  "file": "2503.14456v2.pdf",
+  "download_url": "https://arxiv.org/pdf/2503.14456v2",
+  "pages": 56,
+  "sha256": "f01a33393cb2cbd3a0147047d221aa304036e56b047990225539774af89d7418",
+  "retrieved": "2026-10-12"
+}

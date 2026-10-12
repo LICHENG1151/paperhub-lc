@@ -1,0 +1,19 @@
+{
+  "id": "2502.13685",
+  "title": "MoM: Linear Sequence Modeling with Mixture-of-Memories",
+  "date": "2025-02-19",
+  "authors": [
+    "Du, Jusen",
+    "Sun, Weigao",
+    "Lan, Disen",
+    "Hu, Jiaxi",
+    "Cheng, Yu"
+  ],
+  "abstract": "Linear sequence modeling methods, such as linear attention, state space modeling, and linear RNNs, offer significant efficiency improvements by reducing the complexity of training and inference. However, these methods typically compress the entire input sequence into a single fixed-size memory state, which leads to suboptimal performance on recall-intensive tasks. To address this limitation, we introduce a novel architecture called Mixture-of-Memories (MoM). MoM utilizes multiple independent memory states, with a router network directing input tokens to specific memory states. This approach greatly enhances the overall memory capacity while minimizing memory interference. MoM serves as a general framework that can be seamlessly combined with diverse memory update mechanisms across linear models. As a result, MoM performs exceptionally well on recall-intensive tasks, surpassing existing linear sequence modeling techniques. Despite incorporating multiple memory states, the computation of each memory state remains linear in complexity, allowing MoM to retain the linear-complexity advantage during training, while constant-complexity during inference. Our experimental results show that MoM outperforms current linear sequence models on downstream language tasks, particularly recall-intensive tasks, and even achieves performance comparable to Transformer models. The code is released at https://github.com/OpenSparseLLMs/MoM and is also released as a part of https://github.com/OpenSparseLLMs/Linear-MoE.",
+  "version": "v4",
+  "file": "2502.13685v4.pdf",
+  "download_url": "https://arxiv.org/pdf/2502.13685v4",
+  "pages": 18,
+  "sha256": "b390e706143a259f6a101561c7dbd409b652072aced1787cb503714633d10af0",
+  "retrieved": "2026-10-12"
+}

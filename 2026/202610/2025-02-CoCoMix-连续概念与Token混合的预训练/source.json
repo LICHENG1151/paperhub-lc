@@ -1,0 +1,24 @@
+{
+  "id": "2502.08524",
+  "title": "LLM Pretraining with Continuous Concepts",
+  "date": "2025-02-12",
+  "authors": [
+    "Tack, Jihoon",
+    "Lanchantin, Jack",
+    "Yu, Jane",
+    "Cohen, Andrew",
+    "Kulikov, Ilia",
+    "Lan, Janice",
+    "Hao, Shibo",
+    "Tian, Yuandong",
+    "Weston, Jason",
+    "Li, Xian"
+  ],
+  "abstract": "Next token prediction has been the standard training objective used in large language model pretraining. Representations are learned as a result of optimizing for token-level perplexity. We propose Continuous Concept Mixing (CoCoMix), a novel pretraining framework that combines discrete next token prediction with continuous concepts. Specifically, CoCoMix predicts continuous concepts learned from a pretrained sparse autoencoder and mixes them into the model's hidden state by interleaving with token hidden representations. Through experiments on multiple benchmarks, including language modeling and downstream reasoning tasks, we show that CoCoMix is more sample efficient and consistently outperforms standard next token prediction, knowledge distillation and inserting pause tokens. We find that combining both concept learning and interleaving in an end-to-end framework is critical to performance gains. Furthermore, CoCoMix enhances interpretability and steerability by allowing direct inspection and modification of the predicted concept, offering a transparent way to guide the model's internal reasoning process.",
+  "version": "v1",
+  "file": "2502.08524v1.pdf",
+  "download_url": "https://arxiv.org/pdf/2502.08524v1",
+  "pages": 17,
+  "sha256": "02442c5e0d6a0156893b45222b6d2ce4089a8eb5414986bac6760a7f82781f59",
+  "retrieved": "2026-10-12"
+}
