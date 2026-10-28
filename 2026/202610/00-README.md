@@ -2,19 +2,20 @@
 name: 202610论文归档索引
 creator: Li Cheng
 created: 2026-10-08
-modified: 2026-10-12
+modified: 2026-10-28
 -->
 
 # 202610 · LLM 架构与技术报告归档
 
 [根目录三维索引](../../README.md)
 
-本月共 41 篇；新增论文归档于 2026-10-12，保留既有确定性训练与逐位复现条目。发表时间与归档月份不同；每张表按发表时间倒序。
+本月共 42 篇；2026-10-28 新增 GPU 集群运维教程，保留 2026-10-12 及此前归档。发表时间与归档月份不同；既有总表及论文/厂商表保留原倒序，新教程归入「四、技术手册/教程」。
 
 ## 发表时间总表
 
 | 发表 | 标题 | 来源 | 主题 | 状态 / 证据 | 入口 |
 |---|---|---|---|---|---|
+| 2026-10-25 | 万卡GPU集群运维全掌握：精通监控四平面、故障五分类与调优三板斧 | 基础架构师之路 · PingM | GPU监控与故障运维 | 已消化 / 原文PDF核验 | [导航](2026-10-PingM-万卡GPU集群监控与故障处置/README.md) · [总结](2026-10-PingM-万卡GPU集群监控与故障处置/总结.md) |
 | 2026-09-23 | Hunyuan-A13B Technical Report | 腾讯 Hunyuan | MoE与路由、KV压缩与长上下文 | 速览 / A | [导航](2026-09-HunyuanA13B-%E4%BD%8E%E6%BF%80%E6%B4%BB%E5%8F%82%E6%95%B0MoE%E6%A8%A1%E5%9E%8B%E8%AE%BE%E8%AE%A1/README.md) · [总结](2026-09-HunyuanA13B-%E4%BD%8E%E6%BF%80%E6%B4%BB%E5%8F%82%E6%95%B0MoE%E6%A8%A1%E5%9E%8B%E8%AE%BE%E8%AE%A1/%E6%80%BB%E7%BB%93.md) |
 | 2026-09 | OPEN-1B: A Fully Auditable Training Run | Gensyn | 训练系统与可复现性 | 速览 / H | [导航](2026-09-OPEN-1B-%E5%BC%82%E6%9E%84%E7%A1%AC%E4%BB%B6%E4%B8%8A%E5%8F%AF%E5%AE%A1%E8%AE%A1%E7%9A%84%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83/README.md) · [总结](2026-09-OPEN-1B-%E5%BC%82%E6%9E%84%E7%A1%AC%E4%BB%B6%E4%B8%8A%E5%8F%AF%E5%AE%A1%E8%AE%A1%E7%9A%84%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83/%E6%80%BB%E7%BB%93.md) |
 | 2026-04-29 | GLM-5V-Turbo: Toward a Native Foundation Model for Multimodal Agents | 智谱 GLM | 多模态骨干、MoE与路由 | 速览 / A | [导航](2026-04-GLM5VTurbo-%E5%8E%9F%E7%94%9F%E5%A4%9A%E6%A8%A1%E6%80%81%E6%99%BA%E8%83%BD%E4%BD%93%E5%9F%BA%E7%A1%80%E6%A8%A1%E5%9E%8B/README.md) · [总结](2026-04-GLM5VTurbo-%E5%8E%9F%E7%94%9F%E5%A4%9A%E6%A8%A1%E6%80%81%E6%99%BA%E8%83%BD%E4%BD%93%E5%9F%BA%E7%A1%80%E6%A8%A1%E5%9E%8B/%E6%80%BB%E7%BB%93.md) |
@@ -155,9 +156,15 @@ modified: 2026-10-12
 | 2025-05-11 | Seed1.5-VL Technical Report | 速览 | Seed1.5-VL 用原生动态分辨率 Seed-ViT、2×2 池化与 MLP 接入 20B 激活参数 MoE，控制高分辨率视觉 token 成本。 | [导航](2025-05-Seed1.5VL-%E9%AB%98%E6%95%88%E8%A7%86%E8%A7%89%E7%BC%96%E7%A0%81%E4%B8%8E%E7%A8%80%E7%96%8F%E8%AF%AD%E8%A8%80%E9%AA%A8%E5%B9%B2/README.md) · [总结](2025-05-Seed1.5VL-%E9%AB%98%E6%95%88%E8%A7%86%E8%A7%89%E7%BC%96%E7%A0%81%E4%B8%8E%E7%A8%80%E7%96%8F%E8%AF%AD%E8%A8%80%E9%AA%A8%E5%B9%B2/%E6%80%BB%E7%BB%93.md) |
 | 2025-04-10 | Seed1.5-Thinking: Advancing Superb Reasoning Models with Reinforcement Learning | 速览 | 记录 Seed1.5-Thinking 的模型骨干与大规模推理训练方案，作为字节路线的基线材料。 | [导航](2025-04-Seed1.5Thinking-%E7%A8%80%E7%96%8F%E9%AA%A8%E5%B9%B2%E4%B8%8E%E5%A4%A7%E8%A7%84%E6%A8%A1%E6%8E%A8%E7%90%86%E8%AE%AD%E7%BB%83%E9%85%8D%E5%A5%97/README.md) · [总结](2025-04-Seed1.5Thinking-%E7%A8%80%E7%96%8F%E9%AA%A8%E5%B9%B2%E4%B8%8E%E5%A4%A7%E8%A7%84%E6%A8%A1%E6%8E%A8%E7%90%86%E8%AE%AD%E7%BB%83%E9%85%8D%E5%A5%97/%E6%80%BB%E7%BB%93.md) |
 
+## 四、技术手册/教程
+
+| 发表 | 标题 | 状态 | 一句话 | 入口 |
+|---|---|---|---|---|
+| 2026-10-25 | 万卡GPU集群运维全掌握：精通监控四平面、故障五分类与调优三板斧 | 已消化 | 分四平面建立监控、按五类故障定位处置，并对照 AOM 覆盖与原文设置边界。 | [导航](2026-10-PingM-万卡GPU集群监控与故障处置/README.md) · [总结](2026-10-PingM-万卡GPU集群监控与故障处置/总结.md) |
+
 ## 归档说明
 
-2026-10-08 的确定性训练归档原文与笔记保留。本次新增均标“速览”，未执行论文实验。此前月份已经归档的 Kimi K3、DeepSeek-V4.1-Flash 等在根索引复用原入口，不重复建立副本。
+2026-10-08 的确定性训练归档原文与笔记保留。2026-10-12 新增条目标“速览”，未执行论文实验。2026-10-28 同步的 GPU 运维教程标“已消化”，包含原文 PDF、总结和导航；未执行文中运维动作或压测。此前月份已经归档的 Kimi K3、DeepSeek-V4.1-Flash 等在根索引复用原入口，不重复建立副本。
 
 ## 保留的工程资料
 
