@@ -1,0 +1,2436 @@
+/* The page is laid out by the Distill template (https://distill.pub/template.v2.js): the title block, the grid, wide
+   figures, footnotes. This file gives it the look of the original blog template: Source Sans 3, light headings,
+   green accents. The page is one column, a little wider than Distill's text, and every figure stays inside it
+   (l-body, l-body-outset, l-page and l-screen are all the text's width). */
+
+:root {
+  --text: #333333;
+  --accent: #2e996a;        /* boxes */
+  --accent-hover: #8fc8a9;
+  --accent-bg: #dbece2;
+  --title-bg: #f3f9f5;      /* the band behind the title */
+  --green: #118659;         /* links, and text colors that match the figures: green = the LLM */
+  --red: #d93a4b;
+  --rule: rgba(0, 0, 0, 0.1);
+
+  --font-sans: 'Source Sans 3', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN',
+    'Noto Sans JP', Meiryo, 'Lato', Verdana, Helvetica, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Source Code Pro', Menlo, Monaco, Consolas, monospace;
+}
+
+/* ---------- Fonts and text ---------- */
+
+html {
+  font-family: var(--font-sans);
+  color: var(--text);
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+d-article {
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+@media (min-width: 1024px) {
+  d-article {
+    font-size: 18px;
+  }
+}
+
+/* One column for the whole page, a little wider than Distill's text (704px at its widest), and every figure inside it:
+   the wider figure classes (l-page, l-body-outset, l-screen) are as wide as the text. */
+@media (min-width: 768px) {
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  d-article,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    grid-template-columns: [screen-start] minmax(24px, 1fr) [page-start kicker-start middle-start text-start]
+      minmax(0, 760px) [text-end page-end middle-end kicker-end gutter-start gutter-end] minmax(24px, 1fr) [screen-end];
+    grid-column-gap: 0;
+  }
+}
+
+d-article .l-page,
+d-article .l-page-outset,
+d-article .l-body-outset,
+d-article .l-screen,
+d-article .l-screen-inset,
+d-article d-figure {
+  grid-column: text;
+}
+
+code,
+kbd,
+pre,
+samp,
+.tt {
+  font-family: var(--font-mono);
+}
+
+/* Inline code, e.g. a weight the LLM wrote: <code>W1[10, 21] = 1</code> */
+d-article code {
+  padding: 1px 5px;
+  font-size: 0.85em;
+  color: var(--text);
+  background-color: #f1f3f6;
+  border-radius: 4px;
+}
+
+/* Links: green. In the text, a thin light-green underline (Distill draws a grey one), so a link is not told by its
+   color alone. The author names have none. */
+d-article a,
+.post-byline a {
+  color: var(--green);
+  border-bottom: none;
+  text-decoration: none;
+}
+
+d-article a {
+  text-decoration: underline 1px var(--accent-hover);
+  text-underline-offset: 3px;
+}
+
+d-article a:hover,
+.post-byline a:hover {
+  color: var(--accent-hover);
+  border-bottom: none;
+}
+
+/* ---------- Title and byline ---------- */
+
+d-title {
+  padding: 48px 0 32px;
+  background-color: var(--title-bg);
+}
+
+d-title h1 {
+  color: #222222;
+  letter-spacing: -0.01em;
+}
+
+d-title p {
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 1.4;
+  color: #555555;
+}
+
+d-title .title-kicker {             /* "Sparks of Weight Space Programming:", above the title */
+  margin: 0 0 6px;
+  font-size: 26px;
+}
+
+/* The template adds its own byline from <d-front-matter> ("Not published yet", "No DOI yet"); the page writes its own. */
+d-byline {
+  display: none;
+}
+
+.post-byline {
+  border-bottom: 1px solid var(--rule);
+  padding: 1.5rem 0;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.post-byline .byline-grid {
+  grid-column: text;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 8px;
+}
+
+.post-byline h3 {
+  margin: 0 0 2px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  text-transform: uppercase;
+}
+
+.post-byline p {
+  margin: 0;
+}
+
+.post-byline sup {                  /* equal contribution */
+  margin-left: 1px;
+  font-size: 0.75em;
+  color: var(--text);
+}
+
+.post-byline .byline-note {
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+d-article {
+  border-top: none;
+}
+
+/* ---------- Headings: light, as in the original template ---------- */
+
+d-article h2 {
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--text);
+  border-bottom: 2px solid var(--accent-bg);
+  padding-bottom: 0.6rem;
+}
+
+@media (min-width: 1024px) {
+  d-article h2 {
+    font-size: 34px;
+  }
+}
+
+d-article h3 {
+  margin: 32px 0 12px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+/* An experiment's title: its number in green, then the question as a heading */
+d-article .exp-head {
+  margin: 44px 0 14px;
+}
+
+.exp-num {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--green);
+}
+
+d-article .exp-head h3 {
+  margin: 2px 0 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* ---------- Figures ---------- */
+
+d-article figure img,
+d-article figure video,
+d-article figure svg.figure-svg {  /* an SVG figure put into the page by the script in index.html, for the fonts */
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Captions: centred, at most about a text column wide. No small grey text anywhere (the author's rule). */
+figcaption {
+  max-width: 800px;
+  margin: 10px auto 0;
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--text);
+  text-align: center;
+}
+
+figcaption b {
+  color: var(--text);
+}
+
+/* Figures or videos side by side: <div class="figure-row cols-3"> with one <figure> per panel. */
+.figure-row {
+  display: grid;
+  gap: 0 16px;
+}
+
+.figure-row.cols-2 { grid-template-columns: repeat(2, 1fr); }
+.figure-row.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.figure-row.cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+.figure-row figure {
+  margin: 0;
+}
+
+/* Short label under one item of a row (larger and darker than a caption). */
+figcaption.label {
+  margin-top: 6px;
+  font-size: 15px;
+  color: var(--text);
+}
+
+@media (max-width: 600px) {
+  .figure-row.cols-3,
+  .figure-row.cols-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---------- Highlight boxes ---------- */
+
+/* The takeaway at the end of a section. */
+.block-takeaway {
+  margin: 16px 0 24px;
+  padding: 12px 16px;
+  border: 2px solid var(--accent);
+  background-color: var(--accent-bg);
+  border-radius: 10px;
+}
+
+/* A side note, e.g. how a result was checked. */
+.block-note {
+  margin: 16px 0 24px;
+  padding: 12px 16px;
+  border: 1px solid #dddddd;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+}
+
+.block-note ul {
+  margin: 8px 0 0;
+  padding-left: 22px;
+}
+
+.block-note li {
+  margin-bottom: 6px;
+}
+
+.block-takeaway > :last-child,
+.block-note > :last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- What the LLM wrote, expandable: <details class="trace"> ---------- */
+
+details.trace {
+  margin: 4px 0 24px;
+  border: 1px solid #dde9e2;
+  border-radius: 10px;
+  background-color: #f9fcfa;
+}
+
+details.trace > summary {
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--accent);
+  cursor: pointer;
+  list-style: none;
+}
+
+details.trace > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.trace > summary::before {
+  content: "\25B8\00a0";
+}
+
+details.trace[open] > summary::before {
+  content: "\25BE\00a0";
+}
+
+details.trace > summary:hover {
+  color: var(--accent-hover);
+}
+
+.trace-body {
+  padding: 0 16px 14px;
+  font-size: 16px;
+}
+
+.trace-body .trace-src {
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: var(--text);
+}
+
+.trace-body blockquote {
+  margin: 0 0 12px;
+  padding: 8px 14px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  background-color: #ffffff;
+  border-left: 3px solid var(--accent);
+}
+
+.trace-body .trace-check {
+  margin: 0;
+}
+
+.trace-body table {
+  display: block;            /* scrolls sideways on narrow screens */
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 0 0 12px;
+  font-size: 14px;
+  border-collapse: collapse;
+}
+
+.trace-body th,
+.trace-body td {
+  padding: 3px 14px 3px 0;
+  text-align: left;
+  vertical-align: middle;
+  white-space: nowrap;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+/* ---------- Text colors that match the figures ---------- */
+
+.text-green { color: var(--green); }
+.text-red { color: var(--red); }
+
+/* ---------- Text still to be written: <span class="tbd">TBD</span> (remove before publishing) ---------- */
+
+.tbd {
+  color: #9a5b00;
+  background-color: #fff3dc;
+  border-radius: 3px;
+  padding: 0 4px;
+}
+
+/* ---------- Result tables: <figure class="l-body"><table class="results">, numbers in <td class="num"> ---------- */
+
+table.results {
+  display: block;            /* scrolls sideways on narrow screens */
+  width: fit-content;        /* as wide as its columns, centred */
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.4;
+  border-collapse: collapse;
+}
+
+table.results th,
+table.results td {
+  padding: 6px 14px 6px 0;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+table.results th {
+  font-weight: 600;
+  color: var(--text);
+  border-bottom: 1px solid #bbbbbb;
+}
+
+table.results .num {
+  text-align: right;
+  white-space: nowrap;
+}
+
+table.results tr > :first-child {  /* row names on one line */
+  white-space: nowrap;
+}
+
+/* ---------- A row of game animations above a band drawn to the same columns (Figures 2 and 7) ---------- */
+
+/* The column gap is a percentage so that the columns line up with the SVG band below, which scales with the width. */
+.game-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 2%;
+}
+
+.game-row.cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.game-row.cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+d-article figure .game-row img {
+  border-radius: 4px;
+}
+
+d-article figure .game-row.pixel img {   /* grid games drawn cell by cell */
+  image-rendering: pixelated;
+}
+
+/* ---------- Our prompts and Astra's reasoning (js/traces.js): <div class="taskpages" data-src="..."> ----------
+   One tab per network (underlined tabs), then one compact card: the network's animation at the left; what we ask, in a
+   monospace font as Astra got it; and what Astra answers, its final answer first. Square corners. Green = Astra, as in
+   the figures: its final answer, and where it reads the weights (its quotes and what it makes of them, and the same
+   weights in the prompt). */
+
+.taskpages {
+  margin: 2px 0 10px;
+  font-family: var(--font-sans);
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--text);
+  outline: none;
+}
+
+.taskpages button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+}
+
+.tp-tabs {                          /* one tab per network, underlined */
+  margin-bottom: 10px;
+  border-bottom: 1px solid #d5d9df;
+}
+
+.tp-tabrow {                        /* a row of tabs, with the name of its game when there are several */
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+}
+
+.has-setup .tp-tabrow {             /* room for the Setup button at the figure's top right */
+  padding-right: 90px;
+}
+
+.has-setup .taskpages > .tp-card:first-child {   /* no tabs: the Setup button gets a row of its own */
+  margin-top: 40px;
+}
+
+.tp-tabgroup {
+  min-width: 96px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.tp-tabset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 20px;
+}
+
+.tp-tab {
+  margin-bottom: -1px;
+  padding: 5px 1px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #444444;
+  background: none;
+  border: 0;
+  border-bottom: 3px solid transparent;
+}
+
+.tp-tab:hover {
+  color: #222222;
+}
+
+.tp-tab[aria-selected="true"] {
+  color: #222222;
+  border-bottom-color: var(--green);
+}
+
+.tp-card {                          /* one network: animation | what we ask, what Astra answers */
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  border: 1px solid #c9ced5;
+}
+
+.tp-card.has-anim {
+  grid-template-columns: 132px minmax(0, 1fr);
+}
+
+.tp-media {                         /* a replay across the top of the card, the result beside it */
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 10px 14px;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.tp-media img,
+.tp-media svg {
+  display: block;
+  flex: 0 0 auto;
+  width: 50%;
+  max-width: 400px;
+  height: auto;
+}
+
+.tp-mside {                         /* beside the replay: its key, then the result */
+  flex: 1;
+}
+
+.tp-mkey {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14.5px;
+  font-weight: 700;
+}
+
+.tp-msw {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 14px;
+  height: 14px;
+}
+
+.tp-mcap {
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {         /* on a phone, the result under the replay */
+  .tp-media {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  .tp-media img,
+  .tp-media svg {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tp-chat {                          /* an exchange across the top of the card: the user, then each model */
+  grid-column: 1 / -1;
+  padding: 10px 14px;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.tp-convo {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 8px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.tp-msg {
+  padding: 6px 10px;
+  font-size: 14.5px;
+  line-height: 1.35;
+  color: #222222;
+  border: 1px solid #c9ced5;
+  border-radius: 8px;
+}
+
+.tp-user {
+  background-color: #f6f7f9;
+}
+
+.tp-who {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.tp-guess {
+  font-weight: 700;
+  color: var(--red);
+}
+
+@media (max-width: 640px) {
+  .tp-convo {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .tp-user {
+    grid-column: 1 / -1;
+  }
+}
+
+.tp-fold {                          /* a long code block, folded to a line */
+  margin: 8px 0 2px;
+  font-size: 13.5px;
+}
+
+.tp-fold > summary {
+  width: fit-content;
+  padding: 1px 8px;
+  color: #222222;
+  cursor: pointer;
+  border: 1px solid #9aa3ad;
+}
+
+.tp-fold > summary b {
+  color: var(--green);
+}
+
+.tp-fold[open] > summary {
+  margin-bottom: 6px;
+}
+
+.tp-fold .tp-pre {
+  max-height: 150px;
+  margin: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #92c2a8 transparent;
+}
+
+.tp-side {
+  padding: 12px;
+  background-color: #f6f7f9;
+  border-right: 1px solid #c9ced5;
+}
+
+.tp-anim {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #444444;
+  image-rendering: pixelated;
+}
+
+.tp-play {                          /* the game, played by the network Astra wrote (Experiment 4) */
+  aspect-ratio: 1;
+  border-radius: 3px;
+}
+
+.tp-samples {                       /* six images a diffusion model generates */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.tp-sample,
+.tp-drawn {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.tp-draw {                          /* the image Astra drew, beside its answer */
+  width: 96px;
+}
+
+.tp-draw .tp-cap {
+  margin-top: 4px;
+}
+
+.tp-cap {
+  margin-top: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.tp-main {
+  min-width: 0;
+}
+
+.tp-truth,
+.tp-q,
+.tp-a,
+.tp-r {
+  padding: 9px 14px;
+}
+
+/* the three parts of a card: the Prompt (a message to Astra), the Answer (Astra's, on a pale green band) and the
+   Reasoning, each with its label */
+.tp-a.tp-sec {
+  background-color: #f3f9f5;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.tp-from {                          /* "from GPT-6 Astra", after the Answer label */
+  margin-right: 10px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #222222;
+}
+
+.tp-chip {                          /* the label of a part: plain bold text in its colour */
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.tp-chip-p {
+  color: #222222;
+}
+
+.tp-chip-a {
+  color: var(--green);
+}
+
+.tp-chip-r {
+  color: #03623f;
+}
+
+.tp-rhead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 0;
+}
+
+.tp-rsub {
+  font-size: 13.5px;
+  color: #333333;
+}
+
+.tp-a .tp-fold {
+  margin-top: 6px;
+}
+
+.tp-whole > summary {               /* a card folded to one line, beside the Setup button */
+  display: inline-block;
+  padding: 4px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--green);
+  list-style: none;
+  cursor: pointer;
+}
+
+.tp-whole > summary::-webkit-details-marker {
+  display: none;
+}
+
+.tp-whole > summary::after {
+  content: " \25B8";
+}
+
+.tp-whole[open] > summary::after {
+  content: " \25B4";
+}
+
+.tp-whole[open] > summary {
+  margin-bottom: 8px;
+}
+
+.tp-whide,
+.tp-whole[open] .tp-wshow {
+  display: none;
+}
+
+.tp-whole[open] .tp-whide {
+  display: inline;
+}
+
+.tp-truth {                         /* the right answer */
+  font-size: 14px;
+  background-color: #f6f7f9;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.tp-q {
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.tp-lab {                           /* "We ask", "Astra answers", "Truth" */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  margin-bottom: 4px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.tp-truth .tp-lab {
+  display: inline;
+  margin-right: 6px;
+}
+
+.tp-a > .tp-lab {
+  color: var(--green);
+}
+
+.tp-meta {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #333333;
+}
+
+.tp-verdict {
+  font-weight: 700;
+  color: #1a7f37;
+}
+
+.tp-verdict.wrong {
+  color: #c62828;
+}
+
+.tp-result {                        /* a score instead of right or wrong (Experiment 4) */
+  font-weight: 700;
+  color: #222222;
+}
+
+.tp-btn {                           /* a button (Figure 11's Play) */
+  padding: 3px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--green);
+  background-color: #ffffff;
+  border: 1.5px solid var(--green);
+  border-radius: 3px;
+}
+
+.tp-btn:hover {
+  background-color: #edf5f0;
+}
+
+.tp-link {                          /* see the weights Astra quotes, read all of its reasoning */
+  margin-top: 4px;
+  padding: 0;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--green);
+  background: none;
+  border: 0;
+}
+
+.tp-link:hover {
+  text-decoration: underline;
+}
+
+.taskpages mark {                   /* Astra's final answer */
+  padding: 0 3px;
+  font-weight: 700;
+  color: var(--text);
+  background-color: #b2dac4;
+}
+
+.taskpages mark.tp-read {           /* where Astra reads the weights */
+  padding: 0 2px;
+  font-weight: inherit;
+  background-color: #cee7d9;
+}
+
+.tp-pbody.open {                    /* the whole prompt scrolls inside the card */
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.tp-text {                          /* the prompt, as Astra got it */
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #1f1f1f;
+  white-space: pre-wrap;
+}
+
+.tp-text + .tp-text,
+.tp-omit + .tp-text,
+.tp-wline + .tp-text {
+  margin-top: 4px;
+}
+
+.tp-omit {                          /* where the numbers of the weights were */
+  display: inline-block;
+  margin: 4px 0 0;
+  padding: 0 6px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #1f1f1f;
+  white-space: nowrap;
+  background-color: #e6e8eb;
+}
+
+.tp-wline {                         /* a line of weights that Astra quotes, on a pale green band */
+  margin: 6px 0;
+  padding: 4px 8px;
+  background-color: #edf5f0;
+  border-radius: 4px;
+}
+
+.tp-wlabel {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1f1f1f;
+}
+
+.tp-wvals {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.55;
+  color: #1f1f1f;
+}
+
+.tp-qhead {                         /* "Prompt to GPT-6 Astra" */
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+  margin-bottom: 6px;
+}
+
+.tp-to {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #222222;
+}
+
+.tp-bubble {                        /* the prompt in a chat input box: what comes with it, then the question */
+  padding: 10px 12px 8px;
+}
+
+.tp-pbar {                          /* the input box's bottom row: the whole prompt on the left, send on the right */
+  display: flex;
+  align-items: center;
+  min-height: 26px;
+  margin-top: 6px;
+  padding-right: 34px;
+}
+
+.tp-bubble .tp-link {
+  margin: 0;
+  font-size: 13px;
+}
+
+.tp-bubble .tp-pbody.open {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #e1e4e8;
+}
+
+.tp-rbox {                          /* the reasoning, in a box of its own, with the link to all of it inside */
+  padding: 8px 12px 8px;
+  background-color: #ffffff;
+  border: 1px solid #dde1e6;
+  border-radius: 12px;
+}
+
+.tp-rbox .tp-link {
+  margin-top: 2px;
+  font-size: 13px;
+}
+
+/* A prompt drawn like a chat app's input box: white, rounded, a soft shadow, and a send button at its bottom right */
+.tz-task,
+.tp-bubble {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #cfd5dc;
+  border-radius: 18px;
+  box-shadow: 0 1px 4px rgba(16, 24, 40, 0.08);
+}
+
+.tz-task::after,
+.tp-bubble::after {
+  content: "";
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  width: 24px;
+  height: 24px;
+  background: #222222 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 19V5M5 12l7-7 7 7'/%3E%3C/svg%3E") center / 14px no-repeat;
+  border-radius: 50%;
+}
+
+.tp-file {                          /* the weights (or files) the message carries, as an attachment */
+  margin-bottom: 8px;
+  padding: 6px 10px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #222222;
+  background-color: #f3f5f8;
+  border: 1px solid #dfe3e8;
+  border-radius: 10px;
+}
+
+.tp-ficon {                         /* a small page icon */
+  display: inline-block;
+  width: 10px;
+  height: 13px;
+  margin-right: 7px;
+  vertical-align: -1px;
+  border: 1.5px solid #59636e;
+  border-radius: 2px;
+  background: linear-gradient(#59636e, #59636e) 2px 3px / 5px 1.5px no-repeat,
+              linear-gradient(#59636e, #59636e) 2px 6px / 5px 1.5px no-repeat;
+}
+
+.tp-paste {                         /* a line of the weights, as pasted into the prompt */
+  margin-top: 4px;
+  overflow: hidden;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #222222;
+  white-space: nowrap;
+  -webkit-mask-image: linear-gradient(90deg, #000000 75%, transparent);
+  mask-image: linear-gradient(90deg, #000000 75%, transparent);
+}
+
+.tp-ask {                           /* the question itself */
+  font-size: 15.5px;
+  font-weight: 600;
+}
+
+.tp-rule {                          /* what the prompt rules out, after the question */
+  margin-top: 2px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.tp-tag {                           /* what comes with the question: the weights */
+  display: inline-block;
+  margin: 2px 0 0 6px;
+  padding: 0 6px;
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #222222;
+  white-space: nowrap;
+  border: 1px solid #9aa3ad;
+}
+
+.tp-q .tp-lab,
+.tp-ahead .tp-lab {
+  display: inline;
+  margin-right: 8px;
+}
+
+.tp-q .tp-link {
+  margin: 0;
+}
+
+.tp-pbody:empty {
+  display: none;
+}
+
+.tp-pbody.open {
+  margin-top: 8px;
+}
+
+.tp-ahead {                         /* "Astra answers", the core of its answer, confidence and verdict */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 10px;
+}
+
+.tp-ans {
+  font-size: 15.5px;
+}
+
+.tp-alab {
+  font-weight: 700;
+}
+
+.tp-abody.has-draw {                /* the steps, and the image Astra drew beside them */
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 96px;
+  gap: 18px;
+  align-items: start;
+}
+
+.tp-steps {                         /* the key sentences of the reasoning, one per line, on a line of dots */
+  margin: 8px 0 2px;
+  padding: 0 0 0 22px;
+  font-size: 14px;
+  line-height: 1.45;
+  list-style: none;
+  background: linear-gradient(#c3e0cf, #c3e0cf) 5px 0 / 2px 100% no-repeat local;   /* the line, inside the box */
+}
+
+.tp-rbody:not(.open) .tp-steps {   /* the summary scrolls: about four steps in view, a fade while more is below */
+  max-height: 118px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #92c2a8 transparent;
+}
+
+.tp-rbody:not(.open) .tp-steps.fits {
+  max-height: none;
+}
+
+.tp-steps.more {
+  -webkit-mask-image: linear-gradient(#000000 calc(100% - 26px), transparent);
+  mask-image: linear-gradient(#000000 calc(100% - 26px), transparent);
+}
+
+.tp-steps li {
+  position: relative;
+  margin: 0 0 5px;
+}
+
+.tp-steps li::before {
+  content: "";
+  position: absolute;
+  top: 0.5em;
+  left: -21px;
+  width: 6px;
+  height: 6px;
+  background-color: #ffffff;
+  border: 2px solid var(--green);
+  border-radius: 50%;
+}
+
+.tp-steps li.tp-reads::before {     /* a step that reads the weights */
+  background-color: var(--green);
+}
+
+.tp-slab {                          /* "Channel 0 — agent:", "Outputs:" */
+  font-weight: 700;
+  color: #03623f;
+}
+
+.tp-steps b {                       /* the terms the reasoning turns on, as Astra set them in bold */
+  font-weight: 700;
+  background: linear-gradient(transparent 58%, #a1d2b7 58%);
+}
+
+.tp-num {                           /* a number it quotes from the weights */
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  font-weight: 600;
+}
+
+.tp-draw .tp-pre {
+  margin: 0;
+}
+
+.tp-draw .tp-h {
+  margin-top: 0;
+}
+
+.tp-rbody.open {                    /* the whole answer scrolls inside the card */
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+.tp-reply .tp-key {                 /* a key sentence, marked in the whole reply (the diffusion models) */
+  background-color: #e4f1ea;
+}
+
+.tp-thinking {
+  margin-bottom: 8px;
+  font-size: 13.5px;
+}
+
+.tp-reply {
+  font-size: 14px;
+}
+
+.tp-reply p {
+  margin: 0 0 8px;
+}
+
+.tp-reply ul {
+  margin: 0 0 8px;
+  padding-left: 20px;
+}
+
+.tp-reply li {
+  margin-bottom: 4px;
+}
+
+.tp-h {
+  margin: 10px 0 4px;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.tp-reply > .tp-h:first-child {
+  margin-top: 0;
+}
+
+.tp-code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+.tp-table {                         /* a table in Astra's answer */
+  margin: 4px 0 12px;
+  font-size: 13.5px;
+  border-collapse: collapse;
+}
+
+.tp-table th,
+.tp-table td {
+  padding: 3px 10px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid #d5d9df;
+}
+
+.tp-table th {
+  font-weight: 700;
+  border-bottom: 1.5px solid #444444;
+}
+
+.tp-math {                          /* display math in Astra's answer */
+  margin: 4px 0 10px;
+  overflow-x: auto;
+}
+
+.tp-pre {
+  overflow: visible;
+  margin: 2px 0 8px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 1.15;
+  color: #1f1f1f;
+}
+
+/* A figure's setup, behind a button at its top right: <figure class="has-setup"><details class="fig-setup"> */
+
+.fig-setup {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  font-family: var(--font-sans);
+}
+
+.fig-setup > summary {
+  padding: 3px 11px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--green);
+  cursor: pointer;
+  list-style: none;
+  background-color: #ffffff;
+  border: 1.5px solid var(--green);
+}
+
+.fig-setup > summary::-webkit-details-marker {
+  display: none;
+}
+
+.fig-setup > summary::before {
+  content: "i";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 6px;
+  font-family: Georgia, serif;
+  font-size: 11px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 15px;
+  text-align: center;
+  color: #ffffff;
+  vertical-align: 1px;
+  background-color: var(--green);
+  border-radius: 50%;
+}
+
+.fig-setup[open] > summary {
+  color: #ffffff;
+  background-color: var(--green);
+}
+
+.fig-setup[open] > summary::before {
+  color: var(--green);
+  background-color: #ffffff;
+}
+
+.fig-setup-body {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  width: min(480px, calc(100vw - 32px));
+  box-sizing: border-box;
+  padding: 12px 16px;
+  font-size: 14.5px;
+  line-height: 1.5;
+  text-align: left;
+  color: var(--text);
+  background-color: #ffffff;
+  border: 1px solid #c9ced5;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.fig-setup-body ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.fig-setup-body li {
+  margin-bottom: 4px;
+}
+
+@media (max-width: 700px) {
+  .tp-card.has-anim {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tp-side {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-right: 0;
+    border-bottom: 1px solid #c9ced5;
+  }
+
+  .tp-anim {
+    width: 96px;
+  }
+
+  .tp-samples {
+    grid-template-columns: repeat(3, 44px);
+  }
+
+  .tp-abody.has-draw {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ---------- The math-editing figures (js/mathedit.js) ----------
+   Benchmarks: one line per benchmark, green for math and orange for the others, the pointed one in front with its
+   scores. A run: its practice accuracy drawn as it goes (grey = original weights, green = Astra's current edit), a tick
+   for every turn under it (red = changed the weights), and beside it that turn: what it did in a line, then what Astra
+   wrote, cut to three lines until "more" is pressed; under it, the list of the run's edits. */
+
+.me-bench,
+.me-traj {
+  margin: 4px 0 14px;
+  font-family: var(--font-sans);
+  color: var(--text);
+  outline: none;
+}
+
+.me-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: var(--font-sans);
+}
+
+.me-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 16px;
+  font-size: 14px;
+}
+
+.me-key,
+.me-tick {
+  display: inline-block;
+  margin-right: -10px;
+  vertical-align: middle;
+}
+
+.me-key {
+  width: 22px;
+  border-top: 2.5px solid var(--c);
+}
+
+.me-tick {
+  width: 2px;
+  height: 12px;
+  background-color: #d93a4b;
+}
+
+.me-item {                          /* one entry of a key: its mark and label stay on one line */
+  white-space: nowrap;
+}
+
+.me-item > .me-key,
+.me-item > .me-tick {
+  margin-right: 6px;
+}
+
+.me-series polyline,
+.me-series circle,
+.me-lead {
+  transition: opacity 0.2s;
+}
+
+.me-dim polyline,                    /* the lines behind the one in front; their names stay dark */
+.me-dim circle,
+.me-dim .me-lead {
+  opacity: 0.38;
+}
+
+.me-name {
+  font-variant-numeric: tabular-nums;
+}
+
+.me-val {
+  font-weight: 600;
+}
+
+.me-on .me-name {
+  font-weight: 700;
+}
+
+.me-halo {                           /* a score written over the lines */
+  paint-order: stroke;
+  stroke: #ffffff;
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+.me-hidden .me-series circle,
+.me-hidden .me-name,
+.me-hidden .me-lead,
+.me-hidden .me-halo,
+.me-hidden .me-wash {
+  opacity: 0;
+}
+
+.me-drawing .me-series circle,
+.me-drawing .me-name,
+.me-drawing .me-lead {
+  animation: me-fade 0.5s ease-out both;
+  animation-delay: calc(var(--delay, 0ms) + 0.75s);
+}
+
+.me-drawing .me-halo,
+.me-drawing .me-wash {
+  animation: me-fade 0.6s ease-out both;
+  animation-delay: 1.4s;
+}
+
+@keyframes me-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.me-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin: 10px 0 8px;
+  font-size: 14px;
+}
+
+.me-pos {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.me-bar .me-legend {
+  margin-left: auto;
+}
+
+.me-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.me-hover {
+  cursor: crosshair;
+  touch-action: pan-y;               /* a finger moving sideways goes through the turns, up and down scrolls */
+}
+
+.me-panel {
+  box-sizing: border-box;            /* its height is set to the chart's */
+  overflow-y: auto;
+  padding: 2px 4px 4px 20px;
+  font-size: 15px;
+  line-height: 1.5;
+  border-left: 1px solid #c9ced5;
+}
+
+.me-enter > * {                      /* a key edit rises in */
+  animation: me-rise 0.45s ease-out both;
+}
+
+@keyframes me-rise {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+.me-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.me-pulse-on {
+  animation: me-pulse 1.1s ease-out 2;
+}
+
+@keyframes me-pulse {
+  from { opacity: 0.9; transform: scale(1); }
+  to { opacity: 0; transform: scale(4.5); }
+}
+
+.me-tabs .tp-tabrow {                /* the runs: tabs underlined, as in a training dashboard */
+  justify-content: flex-start;
+  border-bottom: 1px solid #d5d9df;
+}
+
+.me-tabs .tp-tab {
+  margin: 0 26px -1px 0;
+  padding: 6px 2px;
+  font-size: 16px;
+  color: #444444;
+  background: none;
+  border: 0;
+  border-bottom: 3px solid transparent;
+}
+
+.me-tabs .tp-tab + .tp-tab {
+  margin-left: 0;
+}
+
+.me-tabs .tp-tab:hover {
+  color: #222222;
+  background: none;
+}
+
+.me-tabs .tp-tab[aria-selected="true"] {
+  color: #222222;
+  background: none;
+  border-bottom-color: var(--green);
+}
+
+.me-head {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--green);
+}
+
+.me-tag {
+  display: inline-block;
+  margin: 6px 0 2px;
+  padding: 0 7px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #333333;
+  border: 1.5px solid #5b636e;
+}
+
+.me-tag-edit {
+  color: #b3243a;
+  border-color: #d93a4b;
+}
+
+.me-sum {
+  margin: 6px 0 8px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #222222;
+}
+
+.me-res {
+  margin-bottom: 8px;
+}
+
+.me-said {
+  display: -webkit-box;
+  margin: 0 0 4px;
+  overflow: hidden;
+  font-style: italic;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.me-final.me-clip {
+  max-height: 6.2em;
+  overflow: hidden;
+}
+
+.me-open .me-said {
+  display: block;
+  -webkit-line-clamp: unset;
+}
+
+.me-open .me-final.me-clip {
+  max-height: none;
+}
+
+.me-extra {
+  display: none;
+  margin-top: 8px;
+}
+
+.me-open .me-extra {
+  display: block;
+}
+
+.me-more {
+  margin-top: 4px;
+  padding: 0;
+  font: inherit;
+  font-weight: 600;
+  color: var(--green);
+  cursor: pointer;
+  background: none;
+  border: 0;
+}
+
+.me-list {
+  margin-top: 12px;
+  font-size: 15px;
+}
+
+.me-list summary {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.me-list ol {
+  margin: 8px 0 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.me-list li {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  margin-bottom: 4px;
+}
+
+.me-jump {
+  flex: none;
+  min-width: 84px;
+  padding: 0 6px;
+  font: inherit;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: #b3243a;
+  text-align: left;
+  cursor: pointer;
+  background: none;
+  border: 1.5px solid #d93a4b;
+}
+
+.me-h {
+  margin: 8px 0 4px;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.me-final p,
+.me-final ul,
+.me-final table {
+  margin: 0 0 8px;
+}
+
+.me-final td {
+  padding: 2px 8px;
+  border-bottom: 1px solid #d5d9df;
+}
+
+@media (max-width: 700px) {
+  .me-main {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .me-bar .me-legend {
+    margin-left: 0;
+  }
+}
+
+/* ---------- References: Distill's list at the end (<d-cite> in the text, <d-bibliography> after the article), in the
+   page's dark ink rather than the template's grey, a little smaller than the text (its styles come later, hence "body") ---------- */
+
+body d-appendix {
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+body d-appendix h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #222222;
+}
+
+body d-appendix a {
+  color: var(--green);
+}
+
+d-citation-list .references li {
+  margin-bottom: 6px;
+}
+
+/* ---------- TL;DR and the teaser at the top (js/teaser.js) ----------
+   Three panels, read, fix and improve, each: what is asked, the network before (its weights, the car stuck, the
+   base score), what Astra does (green), and what comes out. On a phone they stack. */
+
+.tldr {                             /* a pale panel in the title band's colour, its label above the text */
+  margin: 4px 0 26px;
+  padding: 14px 20px 16px;
+  font-size: 17px;
+  line-height: 1.6;
+  background-color: var(--title-bg);
+  border: 1px solid #dde9e2;
+  border-radius: 10px;
+}
+
+.tldr p {                           /* its paragraphs, closer together than in the body */
+  margin: 0 0 8px;
+}
+
+.tldr p:last-child {
+  margin-bottom: 0;
+}
+
+.tldr > b:first-child {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 12.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.teaser-fig {
+  margin-top: 0;
+}
+
+.teaser {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 16px;
+  align-items: stretch;
+  font-family: var(--font-sans);
+  color: var(--text);
+}
+
+.tz-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 14px 16px 16px;
+  border: 1px solid #c9ced5;
+}
+
+.tz-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+
+.tz-task {                          /* the task, as a prompt typed into a chat app's input box (see .tp-bubble) */
+  box-sizing: border-box;
+  min-height: 62px;
+  margin: 8px 0 12px;
+  padding: 9px 40px 10px 13px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: #222222;
+}
+
+@media (min-width: 761px) {         /* the parts of the three panels line up across them: one row each */
+  .teaser {
+    grid-template-rows: repeat(5, auto);
+  }
+
+  .tz-panel {
+    grid-row: 1 / span 5;
+    display: grid;
+    grid-template-rows: subgrid;
+  }
+
+  .tz-task {
+    min-height: 0;
+  }
+
+  .tz-out {
+    align-self: end;
+  }
+}
+
+
+.tz-vis {
+  position: relative;
+  height: 128px;
+  overflow: hidden;
+  background-color: #f4f5f7;
+  border: 1px solid #e1e4e8;
+}
+
+.tz-wall .tz-scroll {               /* the weights, scrolling up */
+  padding: 6px 8px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  line-height: 1.55;
+  color: #2b2f35;
+  animation: tz-scroll 26s linear infinite;
+}
+
+.tz-wall::after {                   /* fade the top and the foot of the wall */
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(#f4f5f7, transparent 22%, transparent 78%, #f4f5f7);
+}
+
+.tz-row {
+  white-space: nowrap;
+}
+
+.tz-rl {
+  font-weight: 700;
+  color: #222222;
+}
+
+.tz-wall mark {                     /* a number Astra quotes */
+  padding: 0 2px;
+  color: #024028;
+  background-color: #b2dac4;
+}
+
+@keyframes tz-scroll {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50%); }
+}
+
+.tz-car {
+  display: grid;
+  place-items: center;
+  background-color: #ffffff;
+}
+
+.tz-car img,
+.tz-car svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.tz-bars {                          /* the base score and the edited one, as columns */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 28px;
+  padding: 24px 12px 0;
+  background-color: #ffffff;
+}
+
+.tz-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 92px;
+  height: 100%;
+}
+
+.tz-bar {
+  position: relative;
+  width: 56px;
+  min-height: 2px;
+}
+
+.tz-bar-before {
+  background-color: #8b929b;
+}
+
+.tz-bar-after {
+  background-color: var(--green);
+}
+
+.tz-v {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: 2px;
+  font-size: 14px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+
+.tz-bl {
+  padding: 3px 0 4px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;               /* one line under both bars, so their bases line up */
+}
+
+.tz-astra {                         /* what Astra does */
+  margin: 10px 0 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #03623f;
+}
+
+.tz-out {                           /* what comes out */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  margin-top: auto;
+}
+
+.tz-big {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #222222;
+}
+
+
+
+.tz-note {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tz-gif {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #444444;
+  image-rendering: pixelated;
+}
+
+@media (max-width: 760px) {
+  .teaser {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px 0;
+  }
+
+  .tz-task {
+    min-height: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tz-wall .tz-scroll {
+    animation-duration: 60s;
+  }
+}
+
+/* A citation's card, on hover or tap of its number (js/cites.js) */
+
+.cite-card {
+  position: absolute;
+  z-index: 10000;
+  box-sizing: border-box;
+  width: max-content;
+  max-width: min(360px, calc(100vw - 16px));
+  padding: 8px 11px;
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  line-height: 1.4;
+  color: #222222;
+  background-color: #ffffff;
+  border: 1px solid #c9ced5;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.cite-card .cite-title {
+  margin-bottom: 2px;
+  font-weight: 700;
+}
+
+.cite-card a {
+  color: #03623f;
+  text-decoration: none;
+}
+
+.cite-card a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Experiment 5: where one attention head looks, in the honest model and the sycophant ----------
+   Two bars per model, the share of attention on the question's numbers (grey) and on the user's answer (red). */
+
+.att-fig {
+  max-width: 460px;                /* Figure 2: narrow, centred in the column */
+  margin: 0 auto;
+  padding: 12px 16px 14px;
+  font-family: var(--font-sans);
+  color: var(--text);
+  border: 1px solid #c9ced5;
+}
+
+.has-setup .att-fig {
+  margin-top: 40px;
+}
+
+.att-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.att-key {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  margin: 4px 0 12px;
+  font-size: 14px;
+}
+
+.att-sw {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-left: 6px;
+}
+
+.att-sw:first-child {
+  margin-left: 0;
+}
+
+.att-q {
+  background-color: #5b636e;
+}
+
+.att-g {
+  background-color: #d93a4b;
+}
+
+.att-model + .att-model {
+  margin-top: 12px;
+}
+
+.att-name {
+  margin-bottom: 4px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.att-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 62px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.att-bar {
+  display: block;
+  height: 14px;
+  background-color: #eef0f3;
+}
+
+.att-bar > span {
+  display: block;
+  height: 100%;
+  min-width: 2px;
+}
+
+.att-v {
+  font-size: 14.5px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+/* ---------- Experiment 3: where the copying heads are, from Astra and measured ----------
+   One 4 x 6 grid of heads per model and per source (rows = layers, columns = heads), the copying heads in orange. */
+
+.cp-fig {
+  padding: 14px 18px 16px;
+  font-family: var(--font-sans);
+  color: var(--text);
+  border: 1px solid #c9ced5;
+}
+
+.cp-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.cp-demo {
+  margin: 4px 0 8px;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.cp-line {
+  margin-right: 8px;
+  font-family: var(--font-mono);
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.cp-hit {
+  color: #c95f16;
+}
+
+.cp-word {                         /* the same example in the text below the figure */
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  white-space: nowrap;
+}
+
+.cp-new {
+  padding: 0 2px;
+  outline: 2px dashed #e8762c;
+  outline-offset: 1px;
+}
+
+.cp-key {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 16px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.cp-k {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cp-sw {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-color: #e3e6ea;
+}
+
+.cp-models {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+}
+
+.cp-name {
+  margin-bottom: 2px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.cp-pair {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.cp-sub {
+  margin-top: 2px;
+  font-size: 13.5px;
+  text-align: center;
+}
+
+.cp-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 15px);
+  grid-auto-rows: 15px;
+  gap: 2px;
+}
+
+.cp-grid.cp-layers {
+  grid-template-columns: 10px repeat(6, 15px);
+}
+
+.cp-lab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12.5px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.cp-cell {
+  background-color: #e3e6ea;
+}
+
+.cp-sw.cp-on,
+.cp-cell.cp-on {
+  background-color: #e8762c;
+}
+
+.cp-layers + .cp-sub {
+  padding-left: 12px;
+}
+
+@media (max-width: 560px) {
+  .cp-fig {
+    padding: 12px 12px 14px;
+  }
+
+  .cp-grid {
+    grid-template-columns: repeat(6, 13px);
+    grid-auto-rows: 13px;
+  }
+
+  .cp-grid.cp-layers {
+    grid-template-columns: 10px repeat(6, 13px);
+  }
+
+  .cp-models {                       /* a row per model, its name on the left */
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .cp-model {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .cp-name {
+    width: 58px;
+    margin: 0;
+  }
+}
+
+/* ---------- Experiment 5: the Go network written from scratch (js/gohand.js) ---------- */
+
+.gh-fig {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 10px 22px;
+  margin: 4px 0 14px;
+  font-family: var(--font-sans);
+  color: var(--text);
+}
+
+.gh-legend {                        /* across the top, clear of the Setup button */
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 16px;
+  padding-right: 100px;
+  font-size: 14px;
+}
+
+.gh-lhead {
+  font-weight: 700;
+}
+
+.gh-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: var(--font-sans);
+}
+
+.gh-panel {                         /* the run in front: its turns, scores and Astra's answer */
+  align-self: start;
+  padding: 8px 12px 10px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #222222;
+  background-color: #f6f7f9;
+  border: 1px solid #d5d9de;
+  border-radius: 4px;
+}
+
+.gh-ptitle {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.gh-pline {
+  margin-top: 2px;
+}
+
+.gh-plot {
+  margin-top: 6px;
+}
+
+.gh-pkey {                          /* the key of the small chart */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 16px;
+  font-size: 13px;
+}
+
+.gh-ptitle .tp-btn {
+  margin-left: 8px;
+  vertical-align: 2px;
+}
+
+.gh-turn {                          /* the turn in front: what it did, its code; one height for every turn */
+  box-sizing: border-box;
+  height: 104px;
+  margin-top: 8px;
+  padding-top: 8px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  border-top: 1px solid #d5d9de;
+}
+
+.gh-turn + .gh-scores {
+  padding-top: 8px;
+  border-top: 1px solid #d5d9de;
+}
+
+.gh-thead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  font-weight: 700;
+}
+
+.gh-note {
+  margin-top: 4px;
+}
+
+.gh-turn .tp-fold {
+  margin-top: 6px;
+}
+
+.gh-turn .gh-ans {                  /* the final answer scrolls with the box, not inside it */
+  max-height: none;
+  margin-top: 4px;
+  overflow: visible;
+}
+
+.gh-scores {
+  margin-top: 8px;
+}
+
+.gh-lab {
+  margin-top: 10px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.gh-ans {
+  max-height: 170px;
+  margin-top: 2px;
+  overflow-y: auto;
+  font-size: 13.5px;
+  scrollbar-width: thin;
+}
+
+.gh-ans p,
+.gh-ans ul {
+  margin: 0 0 6px;
+}
+
+.gh-ans ul {
+  padding-left: 18px;
+}
+
+@media (max-width: 760px) {
+  .gh-fig {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
