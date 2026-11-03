@@ -2,20 +2,21 @@
 name: 202610论文归档索引
 creator: Li Cheng
 created: 2026-10-08
-modified: 2026-10-28
+modified: 2026-10-29
 -->
 
 # 202610 · LLM 架构与技术报告归档
 
 [根目录三维索引](../../README.md)
 
-本月共 43 篇；2026-10-28 新增 MegaScale 论文与 GPU 集群运维教程，保留 2026-10-12 及此前归档。发表时间与归档月份不同；既有总表及论文/厂商表保留原倒序，新教程归入「四、技术手册/教程」。
+本月共 44 篇；2026-10-29 新增 Mara Chain 论文精读（含评测协议与复现限制）；2026-10-28 新增 MegaScale 论文与 GPU 集群运维教程，保留 2026-10-12 及此前归档。发表时间与归档月份不同；既有总表及论文/厂商表保留原倒序，新教程归入「四、技术手册/教程」。
 
 ## 发表时间总表
 
 | 发表 | 标题 | 来源 | 主题 | 状态 / 证据 | 入口 |
 |---|---|---|---|---|---|
 | 2026-10-25 | 万卡GPU集群运维全掌握：精通监控四平面、故障五分类与调优三板斧 | 基础架构师之路 · PingM | GPU监控与故障运维 | 已消化 / 原文PDF核验 | [导航](2026-10-PingM-万卡GPU集群监控与故障处置/README.md) · [总结](2026-10-PingM-万卡GPU集群监控与故障处置/总结.md) |
+| 2026-09-25 | Mara Chain: Rethinking Failure as a Stepping Stone for AI System Auto-Evolution | 蚂蚁及联合研究机构 | Agent产物自进化 | 已消化 / arXiv原文与官方README核验 | [导航](2026-09-MaraChain-失败候选驱动的AI系统自进化/README.md) · [总结](2026-09-MaraChain-失败候选驱动的AI系统自进化/总结.md) |
 | 2026-09-23 | Hunyuan-A13B Technical Report | 腾讯 Hunyuan | MoE与路由、KV压缩与长上下文 | 速览 / A | [导航](2026-09-HunyuanA13B-%E4%BD%8E%E6%BF%80%E6%B4%BB%E5%8F%82%E6%95%B0MoE%E6%A8%A1%E5%9E%8B%E8%AE%BE%E8%AE%A1/README.md) · [总结](2026-09-HunyuanA13B-%E4%BD%8E%E6%BF%80%E6%B4%BB%E5%8F%82%E6%95%B0MoE%E6%A8%A1%E5%9E%8B%E8%AE%BE%E8%AE%A1/%E6%80%BB%E7%BB%93.md) |
 | 2026-09 | OPEN-1B: A Fully Auditable Training Run | Gensyn | 训练系统与可复现性 | 速览 / H | [导航](2026-09-OPEN-1B-%E5%BC%82%E6%9E%84%E7%A1%AC%E4%BB%B6%E4%B8%8A%E5%8F%AF%E5%AE%A1%E8%AE%A1%E7%9A%84%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83/README.md) · [总结](2026-09-OPEN-1B-%E5%BC%82%E6%9E%84%E7%A1%AC%E4%BB%B6%E4%B8%8A%E5%8F%AF%E5%AE%A1%E8%AE%A1%E7%9A%84%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83/%E6%80%BB%E7%BB%93.md) |
 | 2026-04-29 | GLM-5V-Turbo: Toward a Native Foundation Model for Multimodal Agents | 智谱 GLM | 多模态骨干、MoE与路由 | 速览 / A | [导航](2026-04-GLM5VTurbo-%E5%8E%9F%E7%94%9F%E5%A4%9A%E6%A8%A1%E6%80%81%E6%99%BA%E8%83%BD%E4%BD%93%E5%9F%BA%E7%A1%80%E6%A8%A1%E5%9E%8B/README.md) · [总结](2026-04-GLM5VTurbo-%E5%8E%9F%E7%94%9F%E5%A4%9A%E6%A8%A1%E6%80%81%E6%99%BA%E8%83%BD%E4%BD%93%E5%9F%BA%E7%A1%80%E6%A8%A1%E5%9E%8B/%E6%80%BB%E7%BB%93.md) |
@@ -64,6 +65,7 @@ modified: 2026-10-28
 
 | 发表 | 标题 | 状态 | 一句话 | 入口 |
 |---|---|---|---|---|
+| 2026-09-25 | Mara Chain: Rethinking Failure as a Stepping Stone for AI System Auto-Evolution | 已消化 | 保留失败候选和证据进行有限链式修复；需注意训练评测重叠与复现记录缺口。 | [导航](2026-09-MaraChain-失败候选驱动的AI系统自进化/README.md) · [总结](2026-09-MaraChain-失败候选驱动的AI系统自进化/总结.md) |
 | 2026-03-16 | Mamba-3: Improved Sequence Modeling using State Space Principles | 速览 | 从 SSM 离散化、复数状态更新与 MIMO 三方面提高表达能力和推理效率。 | [导航](2026-03-Mamba3-%E5%A4%8D%E6%95%B0%E7%8A%B6%E6%80%81%E4%B8%8EMIMO%E7%9A%84%E9%AB%98%E6%95%88%E5%BA%8F%E5%88%97%E6%A8%A1%E5%9E%8B/README.md) · [总结](2026-03-Mamba3-%E5%A4%8D%E6%95%B0%E7%8A%B6%E6%80%81%E4%B8%8EMIMO%E7%9A%84%E9%AB%98%E6%95%88%E5%BA%8F%E5%88%97%E6%A8%A1%E5%9E%8B/%E6%80%BB%E7%BB%93.md) |
 | 2026-01-12 | Conditional Memory via Scalable Lookup: A New Axis of Sparsity for Large Language Models | 速览 | 将条件记忆查表作为 MoE 条件计算之外的容量轴，让静态模式检索与神经计算分工。 | [导航](2026-01-Engram-%E6%9D%A1%E4%BB%B6%E8%AE%B0%E5%BF%86%E6%9F%A5%E8%A1%A8%E4%B8%8E%E8%AE%A1%E7%AE%97%E5%AE%B9%E9%87%8F%E8%A7%A3%E8%80%A6/README.md) · [总结](2026-01-Engram-%E6%9D%A1%E4%BB%B6%E8%AE%B0%E5%BF%86%E6%9F%A5%E8%A1%A8%E4%B8%8E%E8%AE%A1%E7%AE%97%E5%AE%B9%E9%87%8F%E8%A7%A3%E8%80%A6/%E6%80%BB%E7%BB%93.md) |
 | 2025-12-31 | mHC: Manifold-Constrained Hyper-Connections | 速览 | 扩展残差流并对连接矩阵施加约束，以缓解普通 Hyper-Connections 的传播不稳定问题。 | [导航](2025-12-mHC-%E6%B5%81%E5%BD%A2%E7%BA%A6%E6%9D%9F%E7%9A%84%E5%A4%9A%E6%B5%81%E6%AE%8B%E5%B7%AE%E8%BF%9E%E6%8E%A5/README.md) · [总结](2025-12-mHC-%E6%B5%81%E5%BD%A2%E7%BA%A6%E6%9D%9F%E7%9A%84%E5%A4%9A%E6%B5%81%E6%AE%8B%E5%B7%AE%E8%BF%9E%E6%8E%A5/%E6%80%BB%E7%BB%93.md) |
