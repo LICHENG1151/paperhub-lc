@@ -9,7 +9,7 @@ modified: 2026-10-28
 
 [根目录三维索引](../../README.md)
 
-本月共 42 篇；2026-10-28 新增 GPU 集群运维教程，保留 2026-10-12 及此前归档。发表时间与归档月份不同；既有总表及论文/厂商表保留原倒序，新教程归入「四、技术手册/教程」。
+本月共 43 篇；2026-10-28 新增 MegaScale 论文与 GPU 集群运维教程，保留 2026-10-12 及此前归档。发表时间与归档月份不同；既有总表及论文/厂商表保留原倒序，新教程归入「四、技术手册/教程」。
 
 ## 发表时间总表
 
@@ -57,6 +57,8 @@ modified: 2026-10-28
 | 2025-02-07 | Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach | University of Maryland、ELLIS与MPI、LLNL | 循环与自适应深度、记忆与隐空间计算 | 速览 / B | [导航](2025-02-Huginn-%E5%85%B1%E4%BA%AB%E9%80%92%E5%BD%92%E6%B7%B1%E5%BA%A6%E7%9A%84%E9%9A%90%E7%A9%BA%E9%97%B4%E6%8E%A8%E7%90%86/README.md) · [总结](2025-02-Huginn-%E5%85%B1%E4%BA%AB%E9%80%92%E5%BD%92%E6%B7%B1%E5%BA%A6%E7%9A%84%E9%9A%90%E7%A9%BA%E9%97%B4%E6%8E%A8%E7%90%86/%E6%80%BB%E7%BB%93.md) |
 | 2025-02 | Verde: Verification via Refereed Delegation for Machine Learning Programs | 作者团队待核验 | 智能体与系统工程 | 速览 / H | [导航](2025-02-Verde-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%A7%94%E6%89%98%E8%AE%A1%E7%AE%97%E9%AA%8C%E8%AF%81%E4%B8%8E%E8%B7%A8%E7%A1%AC%E4%BB%B6%E5%8F%AF%E5%A4%8D%E7%8E%B0%E7%AE%97%E5%AD%90/README.md) · [总结](2025-02-Verde-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%A7%94%E6%89%98%E8%AE%A1%E7%AE%97%E9%AA%8C%E8%AF%81%E4%B8%8E%E8%B7%A8%E7%A1%AC%E4%BB%B6%E5%8F%AF%E5%A4%8D%E7%8E%B0%E7%AE%97%E5%AD%90/%E6%80%BB%E7%BB%93.md) |
 | 2025-01-14 | MiniMax-01: Scaling Foundation Models with Lightning Attention | MiniMax | 线性注意力与SSM、MoE与路由、KV压缩与长上下文 | 速览 / A | [导航](2025-01-MiniMax01-LightningAttention%E4%B8%8EMoE%E7%9A%84%E5%A4%A7%E8%A7%84%E6%A8%A1%E7%BB%84%E5%90%88/README.md) · [总结](2025-01-MiniMax01-LightningAttention%E4%B8%8EMoE%E7%9A%84%E5%A4%A7%E8%A7%84%E6%A8%A1%E7%BB%84%E5%90%88/%E6%80%BB%E7%BB%93.md) |
+| 2024-02-23 | MegaScale: Scaling Large Language Model Training to More Than 10,000 GPUs | 字节跳动、北京大学 | 训练扩展、容错与慢节点诊断 | 已消化 / arXiv原文核验 | [导航](2024-02-MegaScale-万卡训练扩展与故障恢复/README.md) · [总结](2024-02-MegaScale-万卡训练扩展与故障恢复/总结.md) |
+
 
 ## 一、学术论文
 
@@ -81,6 +83,8 @@ modified: 2026-10-28
 | 2025-02-11 | TransMLA: Multi-Head Latent Attention Is All You Need | 速览 | 研究从现有 GQA 模型迁移到 MLA，以潜在 KV 表示降低缓存压力。 | [导航](2025-02-TransMLA-GQA%E5%88%B0%E6%BD%9C%E5%9C%A8%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%9A%84%E7%BB%93%E6%9E%84%E8%BF%81%E7%A7%BB/README.md) · [总结](2025-02-TransMLA-GQA%E5%88%B0%E6%BD%9C%E5%9C%A8%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%9A%84%E7%BB%93%E6%9E%84%E8%BF%81%E7%A7%BB/%E6%80%BB%E7%BB%93.md) |
 | 2025-02-07 | Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach | 速览 | 重复运行共享模块，在隐空间增加测试时计算深度。 | [导航](2025-02-Huginn-%E5%85%B1%E4%BA%AB%E9%80%92%E5%BD%92%E6%B7%B1%E5%BA%A6%E7%9A%84%E9%9A%90%E7%A9%BA%E9%97%B4%E6%8E%A8%E7%90%86/README.md) · [总结](2025-02-Huginn-%E5%85%B1%E4%BA%AB%E9%80%92%E5%BD%92%E6%B7%B1%E5%BA%A6%E7%9A%84%E9%9A%90%E7%A9%BA%E9%97%B4%E6%8E%A8%E7%90%86/%E6%80%BB%E7%BB%93.md) |
 | 2025-02 | Verde: Verification via Refereed Delegation for Machine Learning Programs | 速览 | 以争议仲裁和 RepOps 可复现算子验证委托给不可信计算方的机器学习程序。 | [导航](2025-02-Verde-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%A7%94%E6%89%98%E8%AE%A1%E7%AE%97%E9%AA%8C%E8%AF%81%E4%B8%8E%E8%B7%A8%E7%A1%AC%E4%BB%B6%E5%8F%AF%E5%A4%8D%E7%8E%B0%E7%AE%97%E5%AD%90/README.md) · [总结](2025-02-Verde-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%A7%94%E6%89%98%E8%AE%A1%E7%AE%97%E9%AA%8C%E8%AF%81%E4%B8%8E%E8%B7%A8%E7%A1%AC%E4%BB%B6%E5%8F%AF%E5%A4%8D%E7%8E%B0%E7%AE%97%E5%AD%90/%E6%80%BB%E7%BB%93.md) |
+| 2024-02-23 | MegaScale: Scaling Large Language Model Training to More Than 10,000 GPUs | 已消化 | 全栈通信优化与诊断换机闭环，将万卡训练效率和长期有效训练时间共同提升。 | [导航](2024-02-MegaScale-万卡训练扩展与故障恢复/README.md) · [总结](2024-02-MegaScale-万卡训练扩展与故障恢复/总结.md) |
+
 
 ## 二、厂商技术报告
 
