@@ -2,7 +2,7 @@
 name: 2026年11月 论文与技术报告阅读索引
 creator: Li Cheng
 created: 2026-11-03
-modified: 2026-11-03
+modified: 2026-11-13
 -->
 
 # 2026年11月 论文与技术报告阅读索引
@@ -16,6 +16,15 @@ modified: 2026-11-03
 |---|---|---|---|---|
 | 2026-11-02 | Sparks of Weight-Space Programming: LLMs can natively read & write neural network weights | 速览 | MIT CSAIL 博客：前沿 LLM 不经 optimizer 直接读 weights 判断网络行为、直接改 weights 修复/生成网络；0.016% 编辑把 Qwen3.5-0.8B 的 MATH-500 从 7.9% 提到 48.1% | [README](2026-11-Takehi-LLM原生读写神经网络权重/README.md) · [总结](2026-11-Takehi-LLM原生读写神经网络权重/总结.md) |
 
+## 二、厂商技术报告
+
+### Anthropic
+
+| 发表 | 标题 | 状态 | 一句话 | 入口 |
+|---|---|---|---|---|
+| 2026-11-06 | The components of agent memory | 速览 | 官方博文：agent 记忆 = 会话内记笔记 + 空闲期 dreaming（对日志回放纠错、建 wiki、按目标重组）；模型越强越会自己判断什么值得记，定死规则反而掉分 | [README](2026-11-Anthropic-Agent记忆的组成部分/README.md) · [总结](2026-11-Anthropic-Agent记忆的组成部分/总结.md) |
+
 ## 归档说明
 
 2026-11-03 开月。首篇为 MIT CSAIL 研究博客（Distill 风格交互式页面），原文以完整 HTML + 本地资源形式随档（原始页面无独立 PDF，博客即唯一正式出处）；未复现文中实验。
+2026-11-13 入档第二篇：Anthropic 官方博文（同样无独立 PDF，HTML + 本地资源随档，机构署名无个人作者）。
